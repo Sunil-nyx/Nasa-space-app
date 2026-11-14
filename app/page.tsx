@@ -315,10 +315,10 @@ export default function Home() {
                   {/* Mission Story */}
                   <p className="text-slate-300 text-sm leading-relaxed mb-6 font-light">
                     When Eugene Cernan and Harrison Schmitt lifted off the Moon in December
-                    1972, they left the lower stage of the Challenger lander and their Lunar
-                    Roving Vehicle parked facing the mountains. In the airless lunar vacuum,
-                    untouched by wind, rain, or rust, the rover sits exactly where they left it,
-                    quietly observing the rising Earth.
+                    1972, their Ascent Stage returned them to lunar orbit while the lower
+                    Descent Stage and Lunar Roving Vehicle remained at Taurus-Littrow. In the
+                    Moon&apos;s airless exosphere, undisturbed by wind, rain, or biological decay,
+                    the historic descent base sits facing the mountains beneath the rising Earth.
                   </p>
                 </div>
 
@@ -464,11 +464,11 @@ export default function Home() {
 
                   {/* Mission Story */}
                   <p className="text-slate-300 text-sm leading-relaxed mb-6 font-light">
-                    Engineered to survive just ninety Martian days, &ldquo;Oppy&rdquo; traversed
-                    the hostile red dunes for nearly 15 years, discovering definitive proof of
-                    ancient liquid water. In 2018, a catastrophic planet-encircling dust storm
-                    darkened the skies. After transmitting its final telemetry, Opportunity rested
-                    in Perseverance Valley beneath a dusting of Martian sands.
+                    Engineered for an initial 90-sol primary mission, Opportunity traversed
+                    the Martian terrain for nearly 15 years, driving 45.16 km—a world record
+                    surpassed only by Perseverance in October 2026. In June 2018, a global
+                    dust storm darkened the skies, bringing its historic mission to a close
+                    in Perseverance Valley.
                   </p>
                 </div>
 
@@ -672,9 +672,10 @@ export default function Home() {
                   The Gravity Penalty
                 </h4>
                 <p className="text-slate-300 text-sm leading-relaxed font-light">
-                  Escaping the gravitational pull of Mars or landing on the Moon consumes
-                  exponential fuel. By making missions one-way, engineers packed ten times
-                  the scientific instrumentation onto every rover and lander.
+                  Escaping deep gravitational wells consumes exponential fuel. For exploration rovers
+                  and planetary landers, designing missions to remain on their target worlds eliminated
+                  the heavy ascent rockets, fuel tanks, and heat shields needed for a return trip,
+                  maximizing the payload capacity available for cameras, spectrometers, and scientific drills.
                 </p>
               </div>
 
@@ -683,12 +684,13 @@ export default function Home() {
                   02
                 </div>
                 <h4 className="text-xl font-bold text-white mb-3">
-                  Frozen in Time
+                  Environmental Stasis &amp; Weathering
                 </h4>
                 <p className="text-slate-300 text-sm leading-relaxed font-light">
-                  Without liquid water, atmospheric oxygen, or biological decay, metals do not rust
-                  and plastics do not decompose. On worlds without atmospheres like the Moon,
-                  footprints and chassis will remain crisp for millions of years.
+                  Preservation depends on each alien world&apos;s distinct environment. In the Moon&apos;s
+                  near-vacuum exosphere, without liquid water or weather, descent stages endure for centuries,
+                  weathered only by micrometeorites and solar radiation. On Mars, rovers face a thin CO₂ atmosphere,
+                  drifting dust, and severe thermal cycles that slowly bury their tracks.
                 </p>
               </div>
 
@@ -697,12 +699,13 @@ export default function Home() {
                   03
                 </div>
                 <h4 className="text-xl font-bold text-white mb-3">
-                  Galactic Time Capsules
+                  Different Journeys, Different Ends
                 </h4>
                 <p className="text-slate-300 text-sm leading-relaxed font-light">
-                  Many of these explorers carry artifacts for hypothetical future finders:
-                  silicon discs etched with world greetings, microchips containing millions
-                  of human names, and golden records singing the sounds of Earth.
+                  Not every machine stayed behind for the same reason. Apollo 17&apos;s astronauts returned home
+                  while their descent stage remained as a permanent monument; Opportunity explored Mars until
+                  a global dust storm silenced its solar panels; and DART sacrificed itself in a deliberate,
+                  controlled kinetic impact to prove we could safeguard our planet.
                 </p>
               </div>
             </div>

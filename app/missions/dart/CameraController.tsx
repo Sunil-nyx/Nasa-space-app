@@ -23,14 +23,14 @@ export const SCENE_CONFIGS: Record<number, SceneConfig> = {
     targetPos: [0, 0, 0],
   },
   3: {
-    // Chapter 3: The Final Approach (Chasing perspective behind DART bearing down on Dimorphos)
-    cameraPos: [0.4, 0.9, 6.2],
-    targetPos: [0, 0, -4.5],
+    // Chapter 3: The Final Approach (Cinematic 3/4 chase perspective: DART foregrounded on terminal approach, Dimorphos clearly visible ahead)
+    cameraPos: [5.2, 2.5, 5.8],
+    targetPos: [0.7, 0.25, -1.8],
   },
   4: {
-    // Chapter 4: The Impact (Side-profile vantage point observing kinetic impact and debris plume)
-    cameraPos: [3.8, 1.4, -1.8],
-    targetPos: [0, 0.1, -4.5],
+    // Chapter 4: The Impact (Elevated panoramic side angle ensuring kinetic flash and ejecta cone stay visible above story card)
+    cameraPos: [5.2, 2.6, 0.5],
+    targetPos: [0, 0.3, -4.5],
   },
   5: {
     // Chapter 5: Did It Work? (High-inclination planetary vantage showing before/after orbit shift)

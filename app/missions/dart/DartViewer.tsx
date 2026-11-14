@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, Suspense, useEffect, useCallback, useRef } from "react";
+import * as THREE from "three";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { Stars, useProgress } from "@react-three/drei";
 import { AsteroidSystem } from "./AsteroidSystem";
@@ -191,7 +192,7 @@ export default function DartViewer() {
       <WebGLErrorBoundary onError={(err) => setInitError(err.message)}>
         <Canvas
           key={retryKey}
-          shadows
+          shadows={{ type: THREE.PCFShadowMap }}
           camera={{ position: [0, 8.5, 26], fov: 45, near: 0.1, far: 500 }}
           gl={{
             antialias: true,
@@ -297,9 +298,9 @@ export default function DartViewer() {
             {/* ── CHAPTER 3: DART ON TERMINAL APPROACH VECTOR ── */}
             {currentScene === 3 && (
               <DartSpacecraft
-                position={[0, 0.35, 2.8]}
-                rotation={[0, 0, 0]}
-                scale={0.65}
+                position={[2.0, 0.55, 1.0]}
+                rotation={[0.08, 2.80, 0.18]}
+                scale={0.45}
                 activeHotspot={activeHotspot}
                 onSelectHotspot={(id) => {
                   setActiveHotspot(id);

@@ -281,7 +281,7 @@ export const STORY_SCENES: StoryScene[] = [
         story:
           "What remains on the Moon today? The golden descent stage resting upon its four footpads. The Lunar Roving Vehicle parked with its antenna pointed toward Earth. Scientific seismometers and heat flow drills. Jettisoned life-support backpacks. And hundreds of human footprints pressed into the ancient dust. Together, they represent humanity's first fragile step into the cosmos.",
         fact:
-          "VERIFIED FACT: Over 90 distinct human artifacts remain at the Apollo 17 site alone. Multiple nations and NASA guidelines now treat these sites as protected extraterrestrial historical landmarks.",
+          "VERIFIED FACT: Over 90 distinct human artifacts remain at Taurus-Littrow. NASA has established voluntary lunar heritage recommendations to protect these historical landing sites from disturbance by future lunar missions.",
       },
       {
         id: "examine-alsep-package",
@@ -290,9 +290,9 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "hotspot",
         targetId: "alsep",
         story:
-          "Walk 100 metres west of the lander to the ALSEP station. Powered by a small plutonium atomic thermoelectric generator, these instruments continuously measured moonquakes, recorded meteorite bombardments, and measured solar wind particles for nearly five years until NASA turned off receiver stations on Earth in 1977.",
+          "Walk approximately 185 metres west-northwest of the lander to the ALSEP station. Powered by a SNAP-27 plutonium radioisotope thermoelectric generator, these instruments continuously measured moonquakes, recorded meteorite impacts, and measured internal lunar heat flow for nearly five years until NASA turned off receiver stations on Earth in September 1977.",
         fact:
-          "VERIFIED FACT: The lunar laser ranging reflectors placed by Apollo missions are still in active use today. Scientists on Earth fire high-power lasers at them to measure the distance to the Moon down to the millimetre.",
+          "VERIFIED FACT: While Apollo 11, 14, and 15 deployed laser ranging retroreflectors that are still pinged from Earth today, Apollo 17 focused on deep subsurface heat flow, active seismic experiments, and gravity wave detection.",
       },
       {
         id: "read-eternal-plaque",
@@ -390,7 +390,7 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
       { label: "Material", value: "Type 304 Stainless Steel" },
       { label: "Mounting", value: "Front strut below egress ladder" },
       { label: "Signatories", value: "E. Cernan, R. Evans, H. Schmitt, R. Nixon" },
-      { label: "Expected Lifespan", value: "Tens of millions of years in vacuum" },
+      { label: "Expected Lifespan", value: "Centuries in the airless lunar environment" },
     ],
     quote:
       "\"Here Man completed his first exploration of the Moon, December 1972, A.D. May the spirit of peace in which we came be reflected in the lives of all mankind.\"",
@@ -425,7 +425,7 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
     identity:
       "An electric planetary rover with four independently driven wire-mesh wheels, folded and deployed from Quadrant 1 of the descent stage.",
     functionality:
-      "Carried two astronauts, life support gear, communications dish, colour television camera, and rock sample carriers across 35.7 kilometres of rugged lunar terrain.",
+      "Carried two astronauts, life support gear, communications dish, colour television camera, and rock sample carriers across an estimated 35.9 kilometres of rugged lunar terrain.",
     missionSignificance:
       "Expanded the exploration range of astronauts from a few hundred metres around the lander to kilometers across massifs and craters, enabling the discovery of volcanic orange soil.",
     specs: [
@@ -560,6 +560,87 @@ function DiscoveryLog({ discovered, onClose, onJumpToHotspot }: DiscoveryLogProp
   );
 }
 
+interface SourcesModalProps {
+  onClose: () => void;
+}
+
+function SourcesModal({ onClose }: SourcesModalProps) {
+  return (
+    <div className="pointer-events-auto fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+      <div className="max-w-xl w-full max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 backdrop-blur-2xl bg-[#030919] border border-cyan-500/30 shadow-[0_0_80px_rgba(56,189,248,0.2)] relative">
+        <button
+          onClick={onClose}
+          className="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white flex items-center justify-center font-mono cursor-pointer transition-colors"
+        >
+          ✕
+        </button>
+
+        <div className="flex items-center gap-2 mb-2 font-mono text-[11px] tracking-[0.25em] text-cyan-400 uppercase">
+          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+          SOURCES &amp; FACT CHECKS
+        </div>
+        <h3 className="text-2xl sm:text-3xl font-black text-white mb-1">Apollo 17 References</h3>
+        <p className="text-xs text-slate-400 font-mono mb-5">
+          Fact-checked: 14 November 2026 — Verified against official NASA historical records and technical reports.
+        </p>
+
+        <div className="space-y-4 mb-6">
+          {SOURCES.map((source, index) => (
+            <div key={index} className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-400/25">
+              <div className="text-[10px] font-mono uppercase tracking-wider text-cyan-300 font-bold mb-1">
+                REFERENCE #{index + 1}
+              </div>
+              <div className="text-xs font-semibold text-white mb-1">
+                {source.label}
+              </div>
+              <a
+                href={source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] font-mono text-cyan-400 hover:text-cyan-300 underline break-all"
+              >
+                {source.url}
+              </a>
+            </div>
+          ))}
+
+          {/* Key Facts Verified */}
+          <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-400/25">
+            <div className="text-[10px] font-mono uppercase tracking-wider text-cyan-300 font-bold mb-2">
+              VERIFIED HISTORICAL FACTS
+            </div>
+            <ul className="space-y-1.5 text-[10px] font-sans text-slate-300">
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Landing Date: December 11, 1972 at Taurus-Littrow Valley</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Challenger Descent Stage remains at landing site; Ascent Stage returned crew then deliberately impacted Moon for seismic research</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> ALSEP location: approximately 185 metres west-northwest of lander</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Laser retroreflectors: deployed by Apollo 11, 14, 15; Apollo 17 focused on heat flow and seismic arrays</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> LRV-3 traverse distance: approximately 35.9 km driven across 3 EVAs</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Orange soil: volcanic pyroclastic glass beads from ~3.64-billion-year-old fire fountain eruption</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Cernan&apos;s initials: &quot;TDC&quot; for daughter Teresa Dawn Cernan traced in soil</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Lunar preservation: voluntary heritage guidelines protect sites from future spacecraft exhaust</li>
+            </ul>
+          </div>
+
+          {/* Disclaimer */}
+          <div className="p-3 rounded-xl bg-black/40 border border-white/5">
+            <p className="text-[10px] font-mono text-slate-400 leading-relaxed">
+              <span className="text-cyan-300 font-semibold">Educational Project — </span>
+              Silent Explorers is an independent educational historical archive. Content is cross-referenced with NASA mission transcripts and historical press kits.
+            </p>
+          </div>
+        </div>
+
+        <button
+          onClick={onClose}
+          className="w-full py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer"
+        >
+          Close Sources
+        </button>
+      </div>
+    </div>
+  );
+}
+
 // ─────────────────────────────────────────────
 // MAIN STORY OVERLAY
 // ─────────────────────────────────────────────
@@ -585,6 +666,7 @@ export function StoryOverlay({
 }: StoryOverlayProps) {
   const [showTimeline, setShowTimeline] = useState(false);
   const [showJournal, setShowJournal] = useState(false);
+  const [showSources, setShowSources] = useState(false);
   const [selectedChoiceId, setSelectedChoiceId] = useState<string | null>(null);
   const [discovered, setDiscovered] = useState<Set<string>>(new Set(["descent-stage"]));
 
@@ -663,6 +745,14 @@ export function StoryOverlay({
             className="hidden sm:block px-3.5 py-2 rounded-xl backdrop-blur-xl bg-[#030714]/85 border border-white/10 hover:border-cyan-400/50 hover:bg-[#060f26] text-xs font-mono tracking-wider text-slate-200 transition-all cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
           >
             Timeline
+          </button>
+
+          {/* Sources & Fact Checks Button */}
+          <button
+            onClick={() => setShowSources(true)}
+            className="px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl backdrop-blur-xl bg-[#030714]/85 border border-cyan-400/40 hover:border-cyan-400 hover:bg-[#060f26] text-[11px] sm:text-xs font-mono tracking-wider text-cyan-300 transition-all cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+          >
+            Sources
           </button>
 
           {/* Free Orbit Toggle */}
@@ -1062,6 +1152,9 @@ export function StoryOverlay({
           }}
         />
       )}
+
+      {/* ── SOURCES & FACT CHECKS MODAL ──────────────────────── */}
+      {showSources && <SourcesModal onClose={() => setShowSources(false)} />}
     </div>
   );
 }

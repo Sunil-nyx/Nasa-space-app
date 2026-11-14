@@ -53,6 +53,7 @@
     --container-xs: 20rem;
     --container-sm: 24rem;
     --container-md: 28rem;
+    --container-lg: 32rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
@@ -370,6 +371,9 @@
   .z-10 {
     z-index: 10;
   }
+  .z-20 {
+    z-index: 20;
+  }
   .z-30 {
     z-index: 30;
   }
@@ -547,6 +551,9 @@
   .max-h-\[calc\(100dvh-120px\)\] {
     max-height: calc(100dvh - 120px);
   }
+  .max-h-\[calc\(100dvh-140px\)\] {
+    max-height: calc(100dvh - 140px);
+  }
   .min-h-0 {
     min-height: 0px;
   }
@@ -636,6 +643,9 @@
   }
   .max-w-\[calc\(100vw-20px\)\] {
     max-width: calc(100vw - 20px);
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
   }
   .max-w-md {
     max-width: var(--container-md);
@@ -741,6 +751,11 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  :where(.space-y-1\.5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 1.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 1.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
   :where(.space-y-2\.5 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse));
@@ -826,6 +841,12 @@
       border-color: color-mix(in oklab, var(--color-amber-400) 20%, transparent);
     }
   }
+  .border-amber-400\/25 {
+    border-color: color-mix(in srgb, oklch(82.8% 0.189 84.429) 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-amber-400) 25%, transparent);
+    }
+  }
   .border-amber-400\/30 {
     border-color: color-mix(in srgb, oklch(82.8% 0.189 84.429) 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -884,6 +905,12 @@
     border-color: color-mix(in srgb, oklch(78.9% 0.154 211.53) 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-cyan-400) 20%, transparent);
+    }
+  }
+  .border-cyan-400\/25 {
+    border-color: color-mix(in srgb, oklch(78.9% 0.154 211.53) 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-cyan-400) 25%, transparent);
     }
   }
   .border-cyan-400\/30 {
@@ -1041,6 +1068,9 @@
   }
   .bg-\[\#030714\]\/98 {
     background-color: color-mix(in oklab, #030714 98%, transparent);
+  }
+  .bg-\[\#030919\] {
+    background-color: #030919;
   }
   .bg-\[\#030919\]\/90 {
     background-color: color-mix(in oklab, #030919 90%, transparent);
@@ -1549,6 +1579,9 @@
   .py-32 {
     padding-block: calc(var(--spacing) * 32);
   }
+  .pt-0\.5 {
+    padding-top: calc(var(--spacing) * 0.5);
+  }
   .pt-1 {
     padding-top: var(--spacing);
   }
@@ -1718,6 +1751,9 @@
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
   }
+  .break-all {
+    word-break: break-all;
+  }
   .text-amber-200 {
     color: var(--color-amber-200);
   }
@@ -1810,6 +1846,9 @@
   }
   .no-underline {
     text-decoration-line: none;
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .antialiased {
     -webkit-font-smoothing: antialiased;
@@ -2473,6 +2512,9 @@
     .hover\:to-orange-600\/35:hover {
       --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     }
+    .hover\:text-amber-300:hover {
+      color: var(--color-amber-300);
+    }
     .hover\:text-cyan-300:hover {
       color: var(--color-cyan-300);
     }
@@ -2538,6 +2580,9 @@
     .sm\:max-h-\[calc\(100dvh-90px\)\] {
       max-height: calc(100dvh - 90px);
     }
+    .sm\:max-h-\[min\(400px\,calc\(100dvh-170px\)\)\] {
+      max-height: min(400px, calc(100dvh - 170px));
+    }
     .sm\:max-h-\[min\(500px\,calc\(100dvh-140px\)\)\] {
       max-height: min(500px, calc(100dvh - 140px));
     }
@@ -2585,6 +2630,9 @@
     }
     .sm\:self-end {
       align-self: flex-end;
+    }
+    .sm\:p-3\.5 {
+      padding: calc(var(--spacing) * 3.5);
     }
     .sm\:p-4 {
       padding: calc(var(--spacing) * 4);

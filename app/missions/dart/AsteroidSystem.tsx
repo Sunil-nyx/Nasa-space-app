@@ -160,11 +160,20 @@ export function AsteroidSystem({
   return (
     <group>
       {/* ── 1. PRIMARY ASTEROID: (65803) DIDYMOS (~780m) ──────── */}
-      {/* Only shown when not in close-up approach/impact scene, or placed in distance */}
+      {/* Placed at center in Ch 1 & 5, in distant background in Ch 3 & 4, hidden during Ch 2 spacecraft inspection */}
       <group
         ref={didymosRef}
-        position={currentScene === 4 ? [35, 15, -45] : [0, 0, 0]}
-        scale={currentScene === 4 ? [0.6, 0.6, 0.6] : [1, 1, 1]}
+        position={
+          currentScene === 3 || currentScene === 4
+            ? [35, 15, -45]
+            : [0, 0, 0]
+        }
+        scale={
+          currentScene === 3 || currentScene === 4
+            ? [0.6, 0.6, 0.6]
+            : [1, 1, 1]
+        }
+        visible={currentScene !== 2}
       >
         <mesh
           geometry={didymosGeometry}
@@ -303,8 +312,8 @@ export function AsteroidSystem({
         )}
       </group>
 
-      {/* ── 3. ORBITAL PATHS ──────────────────────────────────── */}
-      {showOrbits && currentScene !== 4 && currentScene !== 3 && (
+      {/* ── 3. ORBITAL PATHS (Only displayed in Chapter 1 overview and Chapter 5 comparison) ── */}
+      {showOrbits && (currentScene === 1 || currentScene === 5) && (
         <group ref={orbitGroupRef}>
           {/* Pre-Impact Original Orbit (11h 55m) */}
           <Line

@@ -123,30 +123,30 @@ export function DartSpacecraft({
           <boxGeometry args={[0.08, 2.0, 0.08]} />
           <meshStandardMaterial color="#1e293b" metalness={0.9} roughness={0.2} />
         </mesh>
-        {/* Solar Blanket Wing (Front facing: deep photovoltaic blue) */}
-        <mesh position={[0, 1.8, 0.01]} castShadow receiveShadow>
+        {/* Solar Blanket Wing (Front & back deep photovoltaic blue with silicon sheen) */}
+        <mesh position={[0, 1.8, 0]} castShadow receiveShadow>
           <planeGeometry args={[1.2, 2.4]} />
           <meshStandardMaterial
-            color="#0c2340"
-            metalness={0.92}
-            roughness={0.15}
-            side={THREE.FrontSide}
+            color="#081b33"
+            metalness={0.88}
+            roughness={0.2}
+            side={THREE.DoubleSide}
           />
         </mesh>
-        {/* Solar Blanket Backing (Kapton/Polyimide orange-amber) */}
-        <mesh position={[0, 1.8, -0.01]}>
-          <planeGeometry args={[1.2, 2.4]} />
+        {/* Kapton Solar Cell Edge Trim */}
+        <mesh position={[0, 1.8, 0]}>
+          <boxGeometry args={[1.22, 2.42, 0.02]} />
           <meshStandardMaterial
-            color="#b45309"
-            metalness={0.4}
-            roughness={0.6}
-            side={THREE.BackSide}
+            color="#d97706"
+            metalness={0.7}
+            roughness={0.3}
+            wireframe
           />
         </mesh>
         {/* Solar cell grid lines overlay */}
         <mesh position={[0, 1.8, 0.015]}>
           <planeGeometry args={[1.18, 2.38]} />
-          <meshBasicMaterial color="#38bdf8" wireframe transparent opacity={0.25} />
+          <meshBasicMaterial color="#38bdf8" wireframe transparent opacity={0.3} side={THREE.DoubleSide} />
         </mesh>
       </group>
 
@@ -160,27 +160,27 @@ export function DartSpacecraft({
           <boxGeometry args={[0.08, 2.0, 0.08]} />
           <meshStandardMaterial color="#1e293b" metalness={0.9} roughness={0.2} />
         </mesh>
-        <mesh position={[0, -1.8, 0.01]} castShadow receiveShadow>
+        <mesh position={[0, -1.8, 0]} castShadow receiveShadow>
           <planeGeometry args={[1.2, 2.4]} />
           <meshStandardMaterial
-            color="#0c2340"
-            metalness={0.92}
-            roughness={0.15}
-            side={THREE.FrontSide}
+            color="#081b33"
+            metalness={0.88}
+            roughness={0.2}
+            side={THREE.DoubleSide}
           />
         </mesh>
-        <mesh position={[0, -1.8, -0.01]}>
-          <planeGeometry args={[1.2, 2.4]} />
+        <mesh position={[0, -1.8, 0]}>
+          <boxGeometry args={[1.22, 2.42, 0.02]} />
           <meshStandardMaterial
-            color="#b45309"
-            metalness={0.4}
-            roughness={0.6}
-            side={THREE.BackSide}
+            color="#d97706"
+            metalness={0.7}
+            roughness={0.3}
+            wireframe
           />
         </mesh>
         <mesh position={[0, -1.8, 0.015]}>
           <planeGeometry args={[1.18, 2.38]} />
-          <meshBasicMaterial color="#38bdf8" wireframe transparent opacity={0.25} />
+          <meshBasicMaterial color="#38bdf8" wireframe transparent opacity={0.3} side={THREE.DoubleSide} />
         </mesh>
       </group>
 

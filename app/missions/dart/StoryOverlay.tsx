@@ -51,7 +51,7 @@ export const STORY_SCENES: StoryScene[] = [
     hudCoordinates: "BINARY ASTEROID 65803 DIDYMOS // 11M KM FROM EARTH",
     dateStr: "DISCOVERED: 1996 & 2003 — BINARY NEAR-EARTH SYSTEM",
     intro:
-      "Deep in interplanetary space, 11 million kilometers from Earth, two ancient cosmic rocks dance together in a silent gravitational waltz. The larger world is Didymos, an asteroid the size of a mountain (780 meters across) spinning like a giant top. Orbiting tightly around it is a smaller moonlet named Dimorphos, a loose rubble pile roughly the size of the Great Pyramid of Giza (160 meters across). Neither posed any danger of hitting Earth—which made them the ultimate cosmic laboratory.",
+      "Deep in interplanetary space, 11 million kilometers from Earth, two ancient cosmic rocks dance together in a silent gravitational waltz. The larger world is Didymos, an asteroid the size of a mountain (780 meters across) spinning like a giant top. Orbiting tightly around it is a smaller moonlet named Dimorphos, a loose rubble pile roughly the size of the Great Pyramid of Giza (160 meters across). Neither world was on a collision course with Earth—DART was a controlled planetary-defense technology demonstration to prove we can protect our home world.",
     question: "Why did humanity choose this harmless pair for our first planetary defense experiment?",
     choices: [
       {
@@ -93,10 +93,10 @@ export const STORY_SCENES: StoryScene[] = [
     id: 2,
     chapter: "CHAPTER 02 // THE SPACECRAFT BUILT TO CRASH",
     title: "The Spacecraft Built to Crash",
-    hudCoordinates: "DART BUS // 610 KG KINETIC IMPACTOR",
+    hudCoordinates: "DART BUS // 610 KG LAUNCH / 579.4 KG IMPACT MASS",
     dateStr: "LAUNCH: NOVEMBER 24, 2021 — VANDENBERG SFB",
     intro:
-      "Most spacecraft are built with gentle landing legs, parachutes, and heat shields designed to keep their delicate cameras intact. DART (Double Asteroid Redirection Test) was different. Built by Johns Hopkins Applied Physics Laboratory and NASA, DART was a precision kinetic impactor—a 610-kilogram robotic projectile designed to travel across the solar system for ten months and deliberately smash into an asteroid at extreme speed.",
+      "Most spacecraft are built with gentle landing legs, parachutes, and heat shields designed to keep their delicate cameras intact. DART (Double Asteroid Redirection Test) was different. Built by Johns Hopkins Applied Physics Laboratory and NASA, DART was a precision kinetic impactor—a 610-kilogram robotic spacecraft (with an impact mass of approximately 579.4 kg after burning propellant during cruise) designed to travel across the solar system for ten months and deliberately collide with an asteroid at extreme speed.",
     question: "What revolutionary technologies enabled a spacecraft to ram a moving target millions of kilometers away?",
     choices: [
       {
@@ -117,9 +117,9 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "hotspot",
         targetId: "bus",
         story:
-          "Because radio signals took 38 seconds to travel between Earth and DART, human controllers could not pilot the spacecraft with a joystick. In the final hours, SMART Nav (Small-body Maneuvering Autonomous Real-Time Navigation) took full control. Using optical tracking algorithms, it distinguished Dimorphos from Didymos and autonomously fired hydrazine thrusters to stay locked on target.",
+          "Because radio signals took 38 seconds to travel each way between Earth and DART (76 seconds round-trip), human controllers could not pilot the spacecraft with a joystick. Approximately four hours before impact, SMART Nav (Small-body Maneuvering Autonomous Real-Time Navigation) took full autonomous control. Using optical tracking algorithms, it distinguished Dimorphos from Didymos and autonomously fired hydrazine thrusters to steer DART onto an intercept course.",
         fact:
-          "VERIFIED FACT: Dimorphos was only a single pixel in DRACO's field of view until roughly an hour before impact.",
+          "VERIFIED FACT: Dimorphos appeared as only a single faint pixel in DRACO's field of view until roughly an hour before impact, when SMART Nav locked on for final steering corrections.",
       },
       {
         id: "inspect-rosa",
@@ -151,9 +151,9 @@ export const STORY_SCENES: StoryScene[] = [
     chapter: "CHAPTER 03 // THE FINAL APPROACH",
     title: "The Final Approach",
     hudCoordinates: "RELATIVE VELOCITY: 6.1 KM/S // 22,530 KM/H",
-    dateStr: "SEPTEMBER 26, 2022 — 23:10 UTC",
+    dateStr: "SEPTEMBER 26, 2022 — FINAL MINUTES BEFORE 23:14:24 UTC IMPACT",
     intro:
-      "On September 26, 2022, DART entered its terminal approach phase. Hurtling through the vacuum of space at 6.1 kilometers per second (over 22,000 kilometers per hour or 14,000 mph), Dimorphos grew from a faint speck of light into an ominous, boulder-strewn alien world. Millions of people around Earth watched NASA's live stream in breathless silence as pictures updated second by second.",
+      "On September 26, 2022, DART swept through its final approach phase. Hurtling through space at approximately 6.1 kilometers per second (over 22,000 kilometers per hour or 14,000 mph), Dimorphos grew from a faint point of light into an ominous, boulder-strewn alien world. Millions of people around Earth watched NASA's live broadcast in breathless silence as images streamed in second by second.",
     question: "What did DART see in its final seconds before communication went permanently dark?",
     choices: [
       {
@@ -162,9 +162,9 @@ export const STORY_SCENES: StoryScene[] = [
         icon: "⚡",
         actionType: "camera",
         story:
-          "At 6.1 km/s, DART was traveling roughly nine times faster than a rifle bullet. At that extreme speed, covering the distance from New York to London would take less than 15 minutes. The kinetic energy carried by the 610-kg spacecraft equaled about 3 tons of TNT explosives.",
+          "At 6.1 km/s, DART was traveling roughly nine times faster than a rifle bullet. At that speed, traversing the distance between New York and London would take under 15 minutes. The kinetic energy carried by the 579.4-kg spacecraft upon impact equaled approximately 10.94 gigajoules—the equivalent of roughly 2.6 tons of TNT, delivered entirely through kinetic motion without explosives.",
         fact:
-          "VERIFIED FACT: At hypervelocity, material behaves like fluid on impact; the kinetic energy instantly vaporizes and shatters rock on contact.",
+          "VERIFIED FACT: In a kinetic impact, no chemical warhead or explosive is detonated; the immense kinetic energy of extreme velocity alone pulverizes and vaporizes solid rock upon collision.",
       },
       {
         id: "boulder-field",
@@ -173,9 +173,9 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "hotspot",
         targetId: "dimorphos",
         story:
-          "As DART closed to within a few kilometers, DRACO revealed that Dimorphos was not smooth or sandy. It was covered in dozens of jagged boulders, some as large as school buses, resting loosely on top of one another. The landscape looked like a colossal pile of rubble suspended in the void.",
+          "As DART closed to within a few kilometers, DRACO revealed that Dimorphos was not smooth or sandy. It was covered in dozens of jagged boulders, some as large as multi-story buildings, resting loosely together. The landscape looked like a colossal pile of cosmic gravel suspended in deep space.",
         fact:
-          "VERIFIED FACT: Scientists had never seen a rubble pile asteroid up close at such razor-sharp resolution before DART's final frames.",
+          "VERIFIED FACT: Scientists had never seen a rubble-pile asteroid up close at such razor-sharp resolution before DART's final transmitted frames.",
       },
       {
         id: "the-last-pixel",
@@ -183,9 +183,9 @@ export const STORY_SCENES: StoryScene[] = [
         icon: "📡",
         actionType: "story",
         story:
-          "DART's penultimate full image was taken at an altitude of just 12 kilometers (2 seconds before impact), showing rocks and gravel just centimeters across. Its final partial transmission captured the top portion of a frame before the antenna severed, leaving a red 'Lethal Signal Loss' screen in mission control.",
+          "DART's penultimate full image was snapped at an altitude of just 12 kilometers (about 2 seconds before impact), showing surface rocks centimeters across. A final partial frame was transmitting when impact severed the radio feed at 23:14:24 UTC, freezing the live stream into static.",
         fact:
-          "VERIFIED FACT: Mission control erupted in cheers the moment the video feed froze and went red: loss of signal meant DART hit the exact center of Dimorphos!",
+          "VERIFIED FACT: Mission control celebrated when the video stream abruptly cut out: immediate loss of signal confirmed a direct kinetic strike on Dimorphos (popular red 'Lethal Signal Loss' screens seen online were artistic television reconstructions, not actual spacecraft displays).",
       },
     ],
   },
@@ -194,10 +194,10 @@ export const STORY_SCENES: StoryScene[] = [
     id: 4,
     chapter: "CHAPTER 04 // THE IMPACT",
     title: "The Kinetic Impact",
-    hudCoordinates: "KINETIC IMPACT POINT // VAPORIZATION IN VACUUM",
-    dateStr: "SEPTEMBER 26, 2022 — 23:14 UTC (GROUND ZERO)",
+    hudCoordinates: "KINETIC IMPACT POINT // VACUUM DISINTEGRATION",
+    dateStr: "SEPTEMBER 26, 2022 — 23:14:24 UTC (GROUND ZERO)",
     intro:
-      "At 23:14 UTC, DART slammed into the heart of Dimorphos between two massive boulders. There was no atmospheric roar and no fiery explosion—in the vacuum of space, kinetic energy instantly vaporized DART's metal frame into a white-hot flash of plasma, gouging a massive crater and blasting millions of kilograms of rock and dust into space in a glowing cone of debris.",
+      "At exactly 23:14:24 UTC, DART struck Dimorphos between two massive surface boulders at 6.1 km/s. There was no atmospheric roar and no combustion fire—in the vacuum of space, pure kinetic energy instantly shattered and vaporized DART's aluminum structure into a high-temperature kinetic flash, blasting millions of kilograms of rock and regolith backwards into space in an expanding cone of debris.",
     question: "How did a small robot punch a massive punch into an asteroid?",
     choices: [
       {
@@ -207,9 +207,9 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "hotspot",
         targetId: "impact-site",
         story:
-          "When DART struck Dimorphos head-on, it didn't just transfer its own momentum. The asteroid's loose rubble was excavated violently and sprayed backwards into space like rocket exhaust. This debris spray acted like a secondary rocket thruster, multiplying DART's push by a factor of 3.6 (the momentum enhancement factor, beta).",
+          "When DART struck Dimorphos, the effect was far greater than just trading momentum like billiard balls. Millions of kilograms of shattered regolith were blasted backwards into space at high speed. This ejecta plume acted like a natural rocket exhaust, pushing Dimorphos in the opposite direction and amplifying DART's push by a factor of roughly 3.6 (known as the momentum enhancement factor, β).",
         fact:
-          "VERIFIED FACT: Over 1 million kilograms (1,000 tons) of rock and dust were blown off Dimorphos—enough to fill dozens of train railcars!",
+          "VERIFIED FACT: Over 1 million kilograms of pulverized rock and dust were blown off Dimorphos—enough debris to fill dozens of freight train cars!",
       },
       {
         id: "ejecta-tail",
@@ -217,19 +217,19 @@ export const STORY_SCENES: StoryScene[] = [
         icon: "☄",
         actionType: "camera",
         story:
-          "Over the following days, the sun's solar wind and radiation pressure pushed the ejected debris into a luminous comet-like tail extending more than 10,000 kilometers behind the asteroid system. Hubble, James Webb Space Telescope, and amateur astronomers worldwide photographed this glowing tail for months.",
+          "Over the following weeks, solar radiation pressure pushed the fine ejected dust into a glowing, comet-like tail stretching more than 10,000 kilometers into space. Observatories across Earth, along with the Hubble and James Webb Space Telescopes, tracked the evolving debris stream for months.",
         fact:
-          "VERIFIED FACT: Both the Hubble and James Webb Space Telescopes observed the impact simultaneously—their first coordinated target observation.",
+          "VERIFIED FACT: Hubble and the James Webb Space Telescope conducted their first simultaneous coordinated target observation to monitor DART's expanding ejecta tail.",
       },
       {
         id: "boulder-ejection",
-        label: "FLOATING GIANTS",
+        label: "ESCAPING BOULDERS",
         icon: "🪨",
         actionType: "story",
         story:
-          "Hubble photographs later revealed that the collision threw at least 37 massive boulders (ranging from 1 to 7 meters in diameter) clean off Dimorphos into independent orbits around Didymos. These colossal rocks are slowly drifting away at speeds of 1 kilometer per hour.",
+          "High-resolution Hubble Space Telescope images later detected approximately 37 boulders (ranging from 1 to 6.7 meters across) that were dislodged by the impact and observed slowly drifting away from Dimorphos at about 1 kilometer per hour (0.3 m/s). They are drifting out of the system, not in independent orbits around Didymos.",
         fact:
-          "VERIFIED FACT: The kinetic collision was so powerful that it likely reshaped Dimorphos from an oblong ball into a flattened triaxial ellipsoid.",
+          "VERIFIED FACT: Peer-reviewed studies published in 2024 revealed that the kinetic collision was so powerful it reshaped Dimorphos from an oblate spheroid into a more elongated triaxial ellipsoid.",
       },
     ],
   },
@@ -238,11 +238,11 @@ export const STORY_SCENES: StoryScene[] = [
     id: 5,
     chapter: "CHAPTER 05 // DID IT WORK?",
     title: "Did It Work?",
-    hudCoordinates: "ORBITAL PERIOD SHIFT: -33 MINUTES // SUCCESS",
-    dateStr: "RESULTS CONFIRMED: OCTOBER 11, 2022 — NASA TELECON",
+    hudCoordinates: "ORBITAL PERIOD SHIFT: -33 MIN 15 SEC // SUCCESS",
+    dateStr: "OCT 2022 TO 2026 — GROUND TELESCOPES & ESA HERA ARRIVAL",
     intro:
-      "Before impact, NASA established a baseline for mission success: shortening Dimorphos's 11-hour-and-55-minute orbit around Didymos by at least 73 seconds. On October 11, 2022, NASA Administrator Bill Nelson announced the definitive telescope measurements. The world was stunned: DART had shortened the orbit by an astonishing 33 minutes—exceeding the minimum requirement by more than 25 times!",
-    question: "What does this triumph mean for the future survival of human civilization?",
+      "Before impact, NASA defined the baseline benchmark for mission success as shortening Dimorphos's 11-hour-and-55-minute orbit around Didymos by at least 73 seconds. On October 11, 2022, NASA announced that DART had shortened the orbit by roughly 32 minutes—a figure later refined to 33 minutes and 15 seconds (±15s). In March 2026, scientists discovered an even deeper milestone: the impact also shifted the entire binary asteroid's 770-day orbit around the Sun by 0.15 seconds.",
+    question: "What do these historic measurements mean for the future of planetary defense?",
     choices: [
       {
         id: "orbit-shift-data",
@@ -250,20 +250,30 @@ export const STORY_SCENES: StoryScene[] = [
         icon: "⏱",
         actionType: "camera",
         story:
-          "Dimorphos's orbital period dropped from 11 hours 55 minutes down to 11 hours 22 minutes. The moonlet now orbits roughly 37 meters closer to Didymos. Because DART hit in the direction opposite to Dimorphos's orbital motion, it slowed the moon down, pulling its orbit inward.",
+          "Dimorphos's orbital period around Didymos dropped from 11 hours 55 minutes 17 seconds down to 11 hours 22 minutes 03 seconds—a net change of approximately 33 minutes and 15 seconds. Dimorphos now circles roughly 37 meters closer to Didymos. Because DART struck opposite to Dimorphos's motion, it dragged the moonlet inward into a tighter, faster orbit.",
         fact:
-          "VERIFIED FACT: An orbital change of 33 minutes translates to a trajectory deflection that, given years of advance warning, would steer a threatening asteroid thousands of miles away from Earth.",
+          "VERIFIED FACT: Exceeding NASA's minimum 73-second requirement by over 25 times proved that kinetic impactors are a viable defense tool to deflect threatening near-Earth asteroids given sufficient warning time.",
+      },
+      {
+        id: "heliocentric-shift-2026",
+        label: "2026 SOLAR DISCOVERY",
+        icon: "☀️",
+        actionType: "story",
+        story:
+          "In March 2026, planetary scientists published a landmark finding: the kinetic strike was so energetic that it slightly altered the trajectory of the entire Didymos-Dimorphos system around the Sun! Its 770-day heliocentric orbit was shortened by approximately 0.15 seconds. While tiny, this is the first time in human history that our species has measurably altered the path of a celestial body around the Sun.",
+        fact:
+          "VERIFIED FACT: A 0.15-second change over a 770-day solar orbit demonstrates that kinetic impact deflections operate not only on local moonlets, but produce measurable solar-system-scale orbital shifts.",
       },
       {
         id: "upcoming-hera",
-        label: "ESA HERA MISSION",
+        label: "ESA HERA ARRIVAL (NOV 2026)",
         icon: "🛰",
         actionType: "hotspot",
         targetId: "impact-site",
         story:
-          "The DART story isn't over. In October 2024, the European Space Agency launched Hera, a detective spacecraft heading to Didymos. Arriving in late 2026, Hera will measure the exact mass of Dimorphos, inspect the impact crater up close, and deploy two CubeSats to land on the asteroid's surface.",
+          "The DART investigation is now entering its climactic phase. In November 2026, the European Space Agency's Hera spacecraft arrived at the Didymos system and began early characterization from approximately 25 to 30 kilometers away. Hera's cameras, lidar, and dual CubeSats (Juventas and Milani) will map the impact crater, measure Dimorphos's exact mass, and reveal its internal structure.",
         fact:
-          "VERIFIED FACT: Hera's measurements will turn DART's bold kinetic experiment into a repeatable, calibrated planetary defense technique for generations to come.",
+          "VERIFIED FACT: As of mid-November 2026, Hera is in its early characterization orbit ~25-30 km out; close-up crater measurements will turn DART's bold kinetic impact into a fully calibrated planetary defense science.",
       },
       {
         id: "planetary-shield",
@@ -271,9 +281,9 @@ export const STORY_SCENES: StoryScene[] = [
         icon: "🛡",
         actionType: "story",
         story:
-          "For the first time in 4.5 billion years of planetary history, an intelligent species living on Earth deliberately altered the orbit of a celestial body in the solar system. We are no longer defenseless against cosmic collisions: we have demonstrated that with technology and cooperation, humanity can protect our home planet.",
+          "For 4.5 billion years, asteroids struck worlds with impunity. Dinosaurs had no space telescopes and no propulsion systems. With DART, humanity demonstrated that we have the technology, mathematics, and robotic capability to protect our home planet from celestial impact hazards.",
         fact:
-          "VERIFIED FACT: 'This mission shows that NASA is trying to be ready for whatever the universe throws at us.' — NASA Administrator Bill Nelson.",
+          "VERIFIED FACT: Neither Didymos nor Dimorphos ever threatened Earth; DART was a controlled demonstration so humanity will be ready whenever the universe throws a real hazard our way.",
       },
     ],
   },
@@ -435,21 +445,21 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
     title: "Asteroid Moonlet Dimorphos",
     category: "TARGET SYSTEM // KINETIC IMPACT TARGET",
     identity:
-      "Secondary moonlet orbiting Didymos at a distance of 1.2 kilometers. Discovered in 2003 by Petr Pravec.",
+      "Secondary moonlet orbiting Didymos at a distance of ~1.2 kilometers. Discovered in 2003 by Petr Pravec.",
     functionality:
       "Oblong rubble pile held together by fragile gravitational cohesion. Pre-impact orbital period around Didymos was 11 hours, 55 minutes, and 17 seconds.",
     missionSignificance:
-      "The designated collision target for the world's first planetary defense test. Altering its orbit proved that humanity can divert hazardous asteroids.",
+      "The designated collision target for the world's first planetary defense test. Altering its orbit proved that humanity can divert hazardous asteroids without destroying them.",
     specs: [
-      { label: "Dimensions", value: "177 m × 174 m × 116 m" },
-      { label: "Pre-Impact Orbit", value: "11 hours 55 minutes" },
-      { label: "Post-Impact Orbit", value: "11 hours 22 minutes" },
-      { label: "Orbital Shift", value: "-33 minutes (-32 min 42 s)" },
+      { label: "Dimensions (Pre-Impact)", value: "177 m × 174 m × 116 m" },
+      { label: "Pre-Impact Orbit", value: "11 hours 55 minutes 17 seconds" },
+      { label: "Post-Impact Orbit", value: "11 hours 22 minutes 03 seconds" },
+      { label: "Orbital Period Shift", value: "-33 minutes 15 seconds (±15s)" },
     ],
     quote:
-      "“Dimorphos is not a solid rock, but a floating cosmic gravel heap that was radically reshaped by DART.”",
+      "“Dimorphos is not a solid rock, but a floating cosmic gravel heap that was reshaped into a triaxial ellipsoid by DART.”",
     details:
-      "The impact altered Dimorphos's orbital period by 33 minutes and caused an estimated 10-20 meter excavation crater and global deformation.",
+      "The kinetic strike altered Dimorphos's orbital period by 33 minutes and 15 seconds, and slightly adjusted the entire binary system's 770-day solar orbit by 0.15 seconds.",
   },
 
   "impact-site": {
@@ -458,21 +468,190 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
     identity:
       "Impact Ground Zero on Dimorphos between two massive surface boulders.",
     functionality:
-      "Site where 610 kg of spacecraft aluminum, electronics, and propellant collided at 6.1 km/s, transferring ~10 gigajoules of kinetic energy.",
+      "Site where 579.4 kg of spacecraft aluminum, electronics, and residual hydrazine collided at 6.1 km/s (22,500 km/h), delivering ~10.94 gigajoules of kinetic energy.",
     missionSignificance:
-      "Excavated over 1,000 tonnes of asteroid rock into space. The momentum enhancement factor (beta = 3.6) proved that ejected rubble acts like a natural rocket, amplifying the push on the asteroid.",
+      "Excavated over 1,000 tonnes of asteroid rock into space. The momentum enhancement factor (beta ~3.6) proved that ejected rubble acts like a natural rocket, amplifying the push on the asteroid.",
     specs: [
       { label: "Impact Velocity", value: "6.14 km/s (22,100 km/h)" },
-      { label: "Kinetic Energy", value: "~10.8 Gigajoules (~2.6 tons TNT)" },
-      { label: "Momentum Enhancement (β)", value: "2.2 to 4.9 (best estimate ~3.6)" },
-      { label: "Excavated Mass", value: "> 1,000,000 kilograms" },
+      { label: "Impact Mass", value: "579.4 kg (610 kg launch mass)" },
+      { label: "Kinetic Energy", value: "~10.94 Gigajoules (~2.6 tons TNT)" },
+      { label: "Momentum Boost (β)", value: "≈ 3.6 (ejecta rocket effect)" },
     ],
     quote:
       "“The debris blasting away from the crater acted like rocket thrust, pushing Dimorphos far harder than DART alone.”",
     details:
-      "ESA's Hera spacecraft will arrive in late 2026 to inspect this exact crater, measure its precise depth and diameter, and reveal the interior structure of Dimorphos.",
+      "ESA's Hera spacecraft arrived at Didymos in November 2026, commencing initial 25–30 km orbital observations to study the crater's structure, depth, and the internal geology of Dimorphos.",
   },
 };
+
+interface SourcesModalProps {
+  onClose: () => void;
+}
+
+function SourcesModal({ onClose }: SourcesModalProps) {
+  return (
+    <div className="pointer-events-auto fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+      <div className="max-w-xl w-full max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 backdrop-blur-2xl bg-[#031526] border border-cyan-500/30 shadow-[0_0_80px_rgba(6,182,212,0.25)] relative">
+        <button
+          onClick={onClose}
+          className="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white flex items-center justify-center font-mono cursor-pointer transition-colors"
+        >
+          ✕
+        </button>
+
+        <div className="flex items-center gap-2 mb-2 font-mono text-[11px] tracking-[0.25em] text-cyan-400 uppercase">
+          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+          SOURCES &amp; FACT CHECKS
+        </div>
+        <h3 className="text-2xl sm:text-3xl font-black text-white mb-1">DART References</h3>
+        <p className="text-xs text-slate-400 font-mono mb-5">
+          Fact-checked: 14 November 2026 — Verified against NASA and ESA official technical records.
+        </p>
+
+        <div className="space-y-4 mb-6">
+          {/* NASA DART Mission Archive */}
+          <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-400/25">
+            <div className="text-[10px] font-mono uppercase tracking-wider text-cyan-300 font-bold mb-1">
+              PRIMARY MISSION ARCHIVE
+            </div>
+            <div className="text-xs font-semibold text-white mb-1">
+              NASA Planetary Defense: DART Mission Overview &amp; Final Reports
+            </div>
+            <a
+              href="https://science.nasa.gov/mission/dart/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-mono text-cyan-400 hover:text-cyan-300 underline break-all"
+            >
+              https://science.nasa.gov/mission/dart/
+            </a>
+            <p className="text-[10px] text-slate-400 mt-1 font-sans">
+              Launch mass (610 kg), terminal impact mass (579.4 kg), impact speed (6.1 km/s), and DRACO camera instrument payload telemetry.
+            </p>
+          </div>
+
+          {/* NASA October 2022 Orbital Period Reduction Announcement */}
+          <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-400/25">
+            <div className="text-[10px] font-mono uppercase tracking-wider text-cyan-300 font-bold mb-1">
+              ORBITAL PERIOD SHIFT (OCTOBER 2022 TO 2024 REFINEMENTS)
+            </div>
+            <div className="text-xs font-semibold text-white mb-1">
+              NASA Confirms DART Mission Impact Changed Asteroid&apos;s Motion in Space
+            </div>
+            <a
+              href="https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-mono text-cyan-400 hover:text-cyan-300 underline break-all"
+            >
+              https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/
+            </a>
+            <p className="text-[10px] text-slate-400 mt-1 font-sans">
+              Telescopic radar and light-curve confirmation of Dimorphos&apos;s orbital period reduction from 11h 55m 17s to 11h 22m 03s (−33 min 15s ±15s), with momentum enhancement factor β ≈ 3.6.
+            </p>
+          </div>
+
+          {/* NASA March 2026 Solar Heliocentric Orbit Shift Discovery */}
+          <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-400/25">
+            <div className="text-[10px] font-mono uppercase tracking-wider text-cyan-300 font-bold mb-1">
+              NEW DISCOVERY — MARCH 2026
+            </div>
+            <div className="text-xs font-semibold text-white mb-1">
+              NASA: DART Impact Changed Heliocentric Orbit of Didymos System Around Sun
+            </div>
+            <a
+              href="https://science.nasa.gov/solar-system/asteroids/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-mono text-cyan-400 hover:text-cyan-300 underline break-all"
+            >
+              https://science.nasa.gov/solar-system/asteroids/
+            </a>
+            <p className="text-[10px] text-slate-400 mt-1 font-sans">
+              Planetary defense observations revealed that DART&apos;s kinetic push slightly altered the entire Didymos-Dimorphos system&apos;s 770-day orbit around the Sun by ~0.15 seconds—the first recorded human alteration of a solar orbit.
+            </p>
+          </div>
+
+          {/* ESA Hera Arrival Update — November 2026 */}
+          <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-400/25">
+            <div className="text-[10px] font-mono uppercase tracking-wider text-cyan-300 font-bold mb-1">
+              CURRENT MISSION STATUS — NOVEMBER 2026
+            </div>
+            <div className="text-xs font-semibold text-white mb-1">
+              ESA Hera Mission: Arrival and Early Characterization Phase
+            </div>
+            <a
+              href="https://www.esa.int/Space_Safety/Hera"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-mono text-cyan-400 hover:text-cyan-300 underline break-all"
+            >
+              https://www.esa.int/Space_Safety/Hera
+            </a>
+            <p className="text-[10px] text-slate-400 mt-1 font-sans">
+              As of mid-November 2026, ESA&apos;s Hera spacecraft has arrived at the binary asteroid system and commenced early characterization from ~25–30 km out prior to close-up crater inspection and CubeSat deployments.
+            </p>
+          </div>
+
+          {/* Hubble Ejecta Boulders Observation */}
+          <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-400/25">
+            <div className="text-[10px] font-mono uppercase tracking-wider text-cyan-300 font-bold mb-1">
+              EJECTA BOULDERS &amp; SHAPE CHANGE
+            </div>
+            <div className="text-xs font-semibold text-white mb-1">
+              ESA/Hubble: Escaping Boulders and Triaxial Deformation
+            </div>
+            <a
+              href="https://esahubble.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-mono text-cyan-400 hover:text-cyan-300 underline break-all"
+            >
+              https://esahubble.org/
+            </a>
+            <p className="text-[10px] text-slate-400 mt-1 font-sans">
+              Hubble detected ~37 boulders (1–6.7 m) slowly drifting away from Dimorphos at ~1 km/h (0.3 m/s). Subsequent shape models demonstrated Dimorphos deformed from an oblate spheroid into an elongated triaxial ellipsoid.
+            </p>
+          </div>
+
+          {/* Key Facts Summary */}
+          <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-400/25">
+            <div className="text-[10px] font-mono uppercase tracking-wider text-cyan-300 font-bold mb-2">
+              VERIFIED SUMMARY
+            </div>
+            <ul className="space-y-1.5 text-[10px] font-sans text-slate-300">
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Launch: November 24, 2021 — SpaceX Falcon 9, Vandenberg SFB</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Kinetic impact time: September 26, 2022 at 23:14:24 UTC</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Launch mass 610 kg; impact mass 579.4 kg</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Impact speed: 6.1 km/s (22,500 km/h); energy ~10.94 gigajoules</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> SMART Nav autonomous guidance active for final ~4 hours</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Controlled kinetic impact (no explosive warhead)</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Binary asteroid system posed 0% threat to Earth</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Orbital period shift: −33 minutes 15 seconds around Didymos</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Heliocentric shift: ~0.15s change in 770-day solar orbit (March 2026 study)</li>
+              <li className="flex gap-2"><span className="text-cyan-400 shrink-0">✓</span> Hera arrived at Didymos in November 2026 (~25–30 km initial orbit)</li>
+            </ul>
+          </div>
+
+          {/* Educational Disclaimer */}
+          <div className="p-3 rounded-xl bg-black/40 border border-white/5">
+            <p className="text-[10px] font-mono text-slate-400 leading-relaxed">
+              <span className="text-cyan-300 font-semibold">Educational Project — </span>
+              Silent Explorers is an independent educational initiative. Content is cross-referenced with NASA and ESA public scientific releases.
+            </p>
+          </div>
+        </div>
+
+        <button
+          onClick={onClose}
+          className="w-full py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-mono text-xs font-bold uppercase tracking-widest transition-colors cursor-pointer"
+        >
+          Close Sources
+        </button>
+      </div>
+    </div>
+  );
+}
 
 // ─────────────────────────────────────────────
 // COMPONENT PROPS
@@ -516,6 +695,7 @@ export function StoryOverlay({
   const [selectedChoiceId, setSelectedChoiceId] = useState<string | null>(null);
   const [showTimeline, setShowTimeline] = useState<boolean>(false);
   const [showJournal, setShowJournal] = useState<boolean>(false);
+  const [showSources, setShowSources] = useState<boolean>(false);
 
   const scene = STORY_SCENES.find((s) => s.id === currentScene) || STORY_SCENES[0];
   const activeChoice = scene.choices.find((c) => c.id === selectedChoiceId) || null;
@@ -579,6 +759,15 @@ export function StoryOverlay({
             TIMELINE
           </button>
 
+          {/* Sources & Fact Checks Button */}
+          <button
+            onClick={() => setShowSources(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black/60 hover:bg-cyan-950/60 border border-cyan-500/30 hover:border-cyan-400 text-xs font-mono text-cyan-300 transition-all cursor-pointer backdrop-blur-md shadow-lg"
+          >
+            <span>📜</span>
+            <span className="hidden sm:inline">SOURCES</span>
+          </button>
+
           {/* Free Camera Toggle */}
           <button
             onClick={onToggleFreeOrbit}
@@ -627,11 +816,11 @@ export function StoryOverlay({
 
       {/* ── CHAPTER 4 IMPACT CONTROL BAR (When on Chapter 4) ───── */}
       {currentScene === 4 && (
-        <div className="pointer-events-auto self-center sm:self-end mt-2 mb-2 p-3 sm:p-4 rounded-2xl bg-[#031526]/90 border border-cyan-400/40 backdrop-blur-xl shadow-[0_0_35px_rgba(56,189,248,0.25)] flex flex-col gap-2.5 max-w-sm w-full">
+        <div className="pointer-events-auto self-center sm:self-end mt-1 mb-1 p-3 sm:p-3.5 rounded-2xl bg-[#031526]/85 border border-cyan-400/40 backdrop-blur-xl shadow-[0_0_35px_rgba(56,189,248,0.25)] flex flex-col gap-2 max-w-sm w-full z-20">
           <div className="flex items-center justify-between text-xs font-mono">
             <span className="text-cyan-300 font-bold uppercase tracking-wider flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-              IMPACT SEQUENCE PLAYBACK
+              IMPACT PLAYBACK // 6.1 KM/S
             </span>
             <span className="text-slate-400 font-mono text-[11px]">
               {(impactProgress * 100).toFixed(0)}%
@@ -649,7 +838,7 @@ export function StoryOverlay({
             className="w-full accent-cyan-400 h-1.5 bg-slate-800 rounded-lg cursor-pointer"
           />
 
-          <div className="flex items-center justify-between gap-2 pt-1">
+          <div className="flex items-center justify-between gap-2 pt-0.5">
             <button
               onClick={onToggleImpactPlay}
               className={`flex-1 py-1.5 px-3 rounded-lg font-mono text-xs font-bold uppercase transition-all cursor-pointer ${
@@ -702,8 +891,14 @@ export function StoryOverlay({
       )}
 
       {/* ── BOTTOM CHAPTER CARD (FIXED HEADER & FOOTER, SCROLLABLE BODY) ── */}
-      <footer className="pointer-events-auto max-w-xl w-full self-start">
-        <div className="rounded-2xl backdrop-blur-2xl bg-[#031526]/95 border border-cyan-500/30 shadow-[0_0_50px_rgba(6,182,212,0.2)] overflow-hidden flex flex-col max-h-[calc(100dvh-120px)] sm:max-h-[min(500px,calc(100dvh-140px))]">
+      <footer className={`pointer-events-auto w-full transition-all duration-300 ${
+        currentScene === 4 ? "max-w-lg self-start" : "max-w-xl self-start"
+      }`}>
+        <div className={`rounded-2xl backdrop-blur-2xl border border-cyan-500/30 shadow-[0_0_50px_rgba(6,182,212,0.2)] overflow-hidden flex flex-col ${
+          currentScene === 4
+            ? "bg-[#031526]/85 max-h-[calc(100dvh-140px)] sm:max-h-[min(400px,calc(100dvh-170px))]"
+            : "bg-[#031526]/95 max-h-[calc(100dvh-120px)] sm:max-h-[min(500px,calc(100dvh-140px))]"
+        }`}>
           {/* Header inside Chapter Card */}
           <div className="p-3.5 sm:px-6 sm:py-3.5 border-b border-white/[0.08] bg-[#020b14]/90 shrink-0">
             <div className="flex items-center justify-between text-[10px] font-mono tracking-[0.25em] text-cyan-400 uppercase mb-1">
@@ -953,26 +1148,34 @@ export function StoryOverlay({
               </div>
 
               <div>
-                <div className="text-xs text-cyan-400 font-bold">SEPTEMBER 26, 2022 — 23:14 UTC</div>
+                <div className="text-xs text-cyan-400 font-bold">SEPTEMBER 26, 2022 — 23:14:24 UTC</div>
                 <div className="text-sm text-white font-semibold mb-1">Kinetic Impact at 6.1 km/s</div>
                 <div className="text-xs text-slate-400 font-sans font-light">
-                  SMART Nav autonomously guided DART into Dimorphos, transmitting images right until impact. Communication went dark upon impact.
+                  SMART Nav autonomously guided DART (579.4 kg impact mass) into Dimorphos at 6.1 km/s, delivering ~10.94 GJ of kinetic energy. Radio transmission severed upon impact.
                 </div>
               </div>
 
               <div>
-                <div className="text-xs text-cyan-400 font-bold">OCTOBER 11, 2022</div>
-                <div className="text-sm text-white font-semibold mb-1">NASA Confirms 33-Minute Orbit Shift</div>
+                <div className="text-xs text-cyan-400 font-bold">OCTOBER 11, 2022 TO 2024</div>
+                <div className="text-sm text-white font-semibold mb-1">Orbital Period Reduction Confirmed (-33m 15s)</div>
                 <div className="text-xs text-slate-400 font-sans font-light">
-                  Ground-based optical and radar telescopes confirmed Dimorphos&apos;s orbit was shortened by 33 minutes—exceeding NASA&apos;s benchmark 25 times over.
+                  Ground-based optical and radar telescopes confirmed Dimorphos&apos;s orbit was shortened by approximately 33 minutes and 15 seconds (from 11h 55m down to 11h 22m), exceeding NASA&apos;s benchmark 25 times over.
                 </div>
               </div>
 
               <div>
-                <div className="text-xs text-cyan-400 font-bold">OCTOBER 7, 2024</div>
-                <div className="text-sm text-white font-semibold mb-1">ESA Hera Mission Launches</div>
+                <div className="text-xs text-cyan-400 font-bold">MARCH 2026</div>
+                <div className="text-sm text-white font-semibold mb-1">Heliocentric Orbit Shift Discovered</div>
                 <div className="text-xs text-slate-400 font-sans font-light">
-                  The European Space Agency launched Hera from Cape Canaveral to rendezvous with Didymos and Dimorphos in late 2026 for close-up crater inspection.
+                  NASA scientists announced that DART&apos;s collision also nudged the entire Didymos-Dimorphos binary system&apos;s 770-day orbit around the Sun by ~0.15 seconds.
+                </div>
+              </div>
+
+              <div>
+                <div className="text-xs text-cyan-400 font-bold">NOVEMBER 2026</div>
+                <div className="text-sm text-white font-semibold mb-1">ESA Hera Spacecraft Arrives</div>
+                <div className="text-xs text-slate-400 font-sans font-light">
+                  The European Space Agency&apos;s Hera mission arrived at the Didymos-Dimorphos system to begin early characterization from ~25–30 km, preparing for close-up crater mapping and CubeSat deployments.
                 </div>
               </div>
             </div>
@@ -986,6 +1189,9 @@ export function StoryOverlay({
           </div>
         </div>
       )}
+
+      {/* ── SOURCES & FACT CHECKS MODAL ──────────────────────── */}
+      {showSources && <SourcesModal onClose={() => setShowSources(false)} />}
     </div>
   );
 }
