@@ -590,43 +590,43 @@ export function StoryOverlay({
   const activeChoice = scene.choices.find((c) => c.id === selectedChoiceId) || null;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-40 flex flex-col justify-between p-4 sm:p-8 select-none">
+    <div className="select-none">
       {/* ── TOP HEADER BAR ────────────────────────────────────── */}
-      <header className="pointer-events-auto flex items-center justify-between gap-3">
+      <header className="pointer-events-none fixed top-0 left-0 right-0 z-40 p-2.5 sm:p-5 flex items-center justify-between gap-2 sm:gap-4">
         {/* Return Button */}
         <Link
           href="/"
-          className="flex items-center gap-3 px-4 py-2 rounded-xl backdrop-blur-xl bg-black/60 border border-white/10 hover:border-cyan-400/50 hover:bg-black/80 transition-all text-white no-underline group shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+          className="pointer-events-auto flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 rounded-xl backdrop-blur-xl bg-[#030714]/85 border border-white/10 hover:border-cyan-400/50 hover:bg-[#060f26] transition-all text-white no-underline group shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
         >
           <span className="text-cyan-400 group-hover:-translate-x-1 transition-transform">←</span>
           <div className="text-left font-mono leading-none">
-            <span className="text-[10px] uppercase tracking-[0.25em] text-slate-400 block mb-0.5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-slate-400 block mb-0.5 hidden sm:block">
               SILENT EXPLORERS
             </span>
             <span className="text-xs font-bold text-slate-100 tracking-wider block group-hover:text-cyan-300">
-              Return to Catalog
+              <span className="hidden sm:inline">Return to </span>Catalog
             </span>
           </div>
         </Link>
 
         {/* Center Mission Badge */}
-        <div className="hidden md:flex items-center gap-3 px-5 py-2 rounded-full backdrop-blur-xl bg-black/60 border border-cyan-500/30 font-mono text-xs text-cyan-300 shadow-[0_0_20px_rgba(56,189,248,0.15)]">
+        <div className="hidden md:flex items-center gap-3 px-5 py-2 rounded-full backdrop-blur-xl bg-[#030714]/85 border border-cyan-500/30 font-mono text-xs text-cyan-300 shadow-[0_0_20px_rgba(56,189,248,0.15)]">
           <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
           <span className="font-bold tracking-widest text-white">APOLLO 17</span>
           <span className="text-white/20">|</span>
-          <span className="tracking-wider text-slate-300">TAURUS-LITTROW VALLEY</span>
+          <span className="tracking-wider text-slate-300">TAURUS-LITTROW</span>
           <span className="text-white/20">|</span>
           <span className="text-cyan-400/90">{scene.hudCoordinates}</span>
         </div>
 
         {/* Right Header Section: Controls & NASA Source Badge */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="pointer-events-auto flex items-center gap-1.5 sm:gap-2.5">
           {/* Mission Journal */}
           <button
             onClick={() => setShowJournal(true)}
-            className="relative px-3.5 py-2 rounded-xl backdrop-blur-xl bg-black/60 border border-white/10 hover:border-cyan-400/50 hover:bg-black/80 text-xs font-mono tracking-wider text-slate-200 transition-all cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+            className="relative px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl backdrop-blur-xl bg-[#030714]/85 border border-white/10 hover:border-cyan-400/50 hover:bg-[#060f26] text-[11px] sm:text-xs font-mono tracking-wider text-slate-200 transition-all cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
           >
-            Mission Journal
+            <span className="hidden sm:inline">Mission </span>Journal
             {discovered.size > 0 && (
               <span className="absolute -top-1.5 -right-1.5 px-1.5 py-0.5 rounded-full bg-cyan-400 text-[9px] font-black text-slate-950 shadow-[0_0_8px_#38bdf8]">
                 {discovered.size}
@@ -637,7 +637,7 @@ export function StoryOverlay({
           {/* Timeline Modal Toggle */}
           <button
             onClick={() => setShowTimeline(!showTimeline)}
-            className="hidden sm:block px-3.5 py-2 rounded-xl backdrop-blur-xl bg-black/60 border border-white/10 hover:border-cyan-400/50 hover:bg-black/80 text-xs font-mono tracking-wider text-slate-200 transition-all cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+            className="hidden sm:block px-3.5 py-2 rounded-xl backdrop-blur-xl bg-[#030714]/85 border border-white/10 hover:border-cyan-400/50 hover:bg-[#060f26] text-xs font-mono tracking-wider text-slate-200 transition-all cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
           >
             Timeline
           </button>
@@ -645,28 +645,28 @@ export function StoryOverlay({
           {/* Free Orbit Toggle */}
           <button
             onClick={onToggleFreeOrbit}
-            className={`px-3.5 py-2 rounded-xl backdrop-blur-xl border text-xs font-mono tracking-wider transition-all cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)] ${
+            className={`px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl backdrop-blur-xl border text-[11px] sm:text-xs font-mono tracking-wider transition-all cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)] ${
               freeOrbit
                 ? "bg-cyan-500/25 border-cyan-400 text-cyan-200 shadow-[0_0_20px_rgba(56,189,248,0.3)]"
-                : "bg-black/60 border-white/10 text-slate-300 hover:border-cyan-400/40"
+                : "bg-[#030714]/85 border-white/10 text-slate-300 hover:border-cyan-400/40"
             }`}
           >
-            {freeOrbit ? "Free Cam (Active)" : "Free Cam"}
+            {freeOrbit ? "Free Cam" : "Orbit"}
           </button>
 
-          {/* ── PART 1: NASA SOURCE IDENTIFICATION BADGE ─────── */}
+          {/* ── NASA SOURCE IDENTIFICATION BADGE ─────── */}
           <div className="relative group">
             <a
               href="https://www.nasa.gov/mission/apollo-17/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Official NASA Apollo 17 Mission Records"
-              className="flex items-center gap-2 px-3 py-1.5 rounded-xl backdrop-blur-xl bg-[#030919]/90 border border-cyan-400/40 hover:border-cyan-400 hover:bg-[#071333] transition-all text-white no-underline shadow-[0_0_15px_rgba(56,189,248,0.15)] group-hover:shadow-[0_0_25px_rgba(56,189,248,0.3)]"
+              className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl backdrop-blur-xl bg-[#030919]/90 border border-cyan-400/40 hover:border-cyan-400 hover:bg-[#071333] transition-all text-white no-underline shadow-[0_0_15px_rgba(56,189,248,0.15)] group-hover:shadow-[0_0_25px_rgba(56,189,248,0.3)]"
             >
-              {/* Original orbital geometry icon (not official insignia) */}
+              {/* Original orbital geometry icon */}
               <svg
-                width="16"
-                height="16"
+                width="15"
+                height="15"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -681,11 +681,11 @@ export function StoryOverlay({
               </svg>
 
               <div className="text-left font-mono leading-tight">
-                <span className="text-[9px] uppercase tracking-[0.2em] text-cyan-400 block font-semibold">
-                  NASA MISSION SOURCE
+                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.18em] text-cyan-400 block font-semibold">
+                  NASA SOURCE
                 </span>
-                <span className="text-[10px] font-bold text-slate-200 tracking-wider flex items-center gap-1 group-hover:text-white">
-                  OFFICIAL RECORDS <span className="text-cyan-400 text-[10px]">↗</span>
+                <span className="text-[9px] sm:text-[10px] font-bold text-slate-200 tracking-wider flex items-center gap-1 group-hover:text-white">
+                  RECORDS <span className="text-cyan-400">↗</span>
                 </span>
               </div>
             </a>
@@ -702,8 +702,8 @@ export function StoryOverlay({
         </div>
       </header>
 
-      {/* ── RIGHT ARTIFACT SELECTOR PILLS ─────────────────────── */}
-      <div className="pointer-events-auto hidden lg:flex flex-col gap-1.5 self-end my-auto max-w-xs">
+      {/* ── RIGHT ARTIFACT SELECTOR PILLS (Floating absolute, non-intrusive) ─────────────────── */}
+      <aside className="pointer-events-auto fixed right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 hidden lg:flex flex-col gap-1.5 max-w-xs">
         <div className="text-[10px] font-mono tracking-[0.25em] text-slate-400 uppercase text-right pr-2 mb-1">
           Examine Artifacts
         </div>
@@ -736,22 +736,22 @@ export function StoryOverlay({
             {item.label}
           </button>
         ))}
-      </div>
+      </aside>
 
-      {/* ── BOTTOM CINEMATIC STORY PANEL ──────────────────────── */}
-      <footer className="pointer-events-auto w-full max-w-3xl story-panel-scroll">
+      {/* ── BOTTOM CINEMATIC STORY PANEL (Fixed bottom, bounded height, sticky controls) ──────────────────────── */}
+      <footer className="pointer-events-auto fixed bottom-2.5 sm:bottom-5 left-2.5 sm:left-6 right-2.5 sm:right-auto sm:w-[680px] lg:w-[760px] max-w-[calc(100vw-20px)] sm:max-w-3xl z-40 story-panel-scroll">
         <div
           data-prevent-scene-wheel="true"
-          className="rounded-2xl backdrop-blur-2xl bg-[#040816]/92 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.9)] relative overflow-hidden flex flex-col max-h-[calc(100vh-140px)] max-h-[calc(100dvh-140px)] min-h-0"
+          className="rounded-2xl backdrop-blur-2xl bg-[#040816]/96 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.95)] relative overflow-hidden flex flex-col h-auto max-h-[calc(100dvh-100px)] sm:max-h-[calc(100dvh-90px)] min-h-0"
         >
           {/* Top cyan gradient accent */}
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-80 z-10 shrink-0" />
 
           {/* Sticky Header inside the Chapter Panel */}
-          <div className="p-4 sm:px-7 sm:pt-6 sm:pb-3 border-b border-white/[0.06] shrink-0 bg-[#040816]/60 backdrop-blur-md">
+          <div className="p-3 sm:px-6 sm:pt-4 sm:pb-2.5 border-b border-white/[0.06] shrink-0 bg-[#040816]/90 backdrop-blur-md">
             {/* Chapter header and navigation dots */}
-            <div className="flex flex-wrap items-center justify-between gap-3 mb-1.5">
-              <span className="font-mono text-xs font-bold tracking-[0.25em] text-cyan-400 uppercase">
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+              <span className="font-mono text-[11px] sm:text-xs font-bold tracking-[0.2em] text-cyan-400 uppercase">
                 {scene.chapter}
               </span>
               <div className="flex items-center gap-1.5 sm:gap-2">
@@ -762,7 +762,7 @@ export function StoryOverlay({
                     aria-label={`Jump to ${s.title}`}
                     className={`h-2 rounded-full transition-all cursor-pointer ${
                       s.id === currentScene
-                        ? "w-7 sm:w-8 bg-cyan-400 shadow-[0_0_10px_#38bdf8]"
+                        ? "w-6 sm:w-8 bg-cyan-400 shadow-[0_0_10px_#38bdf8]"
                         : "w-2 bg-white/20 hover:bg-white/40"
                     }`}
                   />
@@ -771,22 +771,21 @@ export function StoryOverlay({
             </div>
 
             {/* Scene Title & Date */}
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <h2 className="text-lg sm:text-2xl font-black text-white uppercase tracking-tight">
+            <div className="flex flex-wrap items-baseline justify-between gap-1.5">
+              <h2 className="text-base sm:text-xl font-black text-white uppercase tracking-tight">
                 {scene.title}
               </h2>
-              <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 tracking-wider">
+              <span className="text-[9px] sm:text-[11px] font-mono text-slate-400 tracking-wider">
                 {scene.dateStr}
               </span>
             </div>
           </div>
 
-          {/* Scrollable Body: Contains the narrative, questions, and discovery cards */}
+          {/* Scrollable Body: Contains narrative, questions, and discovery cards */}
           <div
-            className="p-4 sm:px-7 sm:py-4 overflow-y-auto chapter-scroll-area flex-1 min-h-0 overscroll-contain select-text"
+            className="p-3.5 sm:px-6 sm:py-3.5 overflow-y-auto chapter-scroll-area flex-1 min-h-0 overscroll-contain select-text"
             style={{ WebkitOverflowScrolling: "touch" }}
             onWheel={(e) => e.stopPropagation()}
-            onTouchMove={(e) => e.stopPropagation()}
           >
             {/* Intro Paragraph */}
             <p className="text-slate-300 text-xs sm:text-sm font-light leading-relaxed mb-3">
@@ -865,7 +864,7 @@ export function StoryOverlay({
           </div>
 
           {/* Persistent Fixed Footer inside Chapter Panel — Never pushed out of viewport */}
-          <div className="p-3 sm:px-7 sm:py-3.5 border-t border-white/[0.08] bg-[#030714]/95 shrink-0 flex items-center justify-between gap-3">
+          <div className="p-2.5 sm:px-6 sm:py-3 border-t border-white/[0.08] bg-[#030714]/98 shrink-0 flex items-center justify-between gap-2 sm:gap-3">
             <button
               onClick={() => handleSetScene(Math.max(1, currentScene - 1))}
               disabled={currentScene === 1}

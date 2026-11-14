@@ -7,7 +7,7 @@ import { LunarTerrain } from "./LunarTerrain";
 import { EarthSphere } from "./EarthSphere";
 import { LunarModule } from "./LunarModule";
 import { CameraController, SCENE_CONFIGS } from "./CameraController";
-import { StoryOverlay, STORY_SCENES } from "./StoryOverlay";
+import { StoryOverlay } from "./StoryOverlay";
 
 // ProgressBridge lives INSIDE Canvas so it can call useProgress().
 // It reports back via a callback — no Html / nested React root needed.
@@ -38,41 +38,6 @@ export default function ApolloViewer() {
   }, []);
 
   const sceneConfig = SCENE_CONFIGS[currentScene] || SCENE_CONFIGS[1];
-
-  // Wheel / scroll listener to step through scenes naturally when hovering over 3D Canvas
-  const handleWheel = useCallback(
-    (e: WheelEvent) => {
-      // If user is hovering over or scrolling inside the story card/modals, do NOT step scene
-      const target = e.target as HTMLElement | null;
-      if (target && target.closest(".story-panel-scroll, .chapter-scroll-area, [data-prevent-scene-wheel='true']")) {
-        return;
-      }
-
-      // Only step scenes if not in free orbit mode and modal not open
-      if (freeOrbit || activeHotspot) return;
-
-      if (e.deltaY > 60) {
-        setCurrentScene((prev) => Math.min(STORY_SCENES.length, prev + 1));
-      } else if (e.deltaY < -60) {
-        setCurrentScene((prev) => Math.max(1, prev - 1));
-      }
-    },
-    [freeOrbit, activeHotspot]
-  );
-
-  useEffect(() => {
-    let timeout: NodeJS.Timeout;
-    const throttledWheel = (e: WheelEvent) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => handleWheel(e), 80);
-    };
-
-    window.addEventListener("wheel", throttledWheel, { passive: true });
-    return () => {
-      window.removeEventListener("wheel", throttledWheel);
-      clearTimeout(timeout);
-    };
-  }, [handleWheel]);
 
   return (
     <div className="relative w-screen h-screen bg-[#02040a] overflow-hidden select-none">

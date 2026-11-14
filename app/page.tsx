@@ -100,15 +100,24 @@ export default function Home() {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+              {/* Featured Mission Shortcut Button */}
+              <a
+                href="/missions/dart"
+                className="w-full sm:w-auto px-7 py-4 rounded-xl bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-950 font-mono text-xs font-black uppercase tracking-[0.2em] shadow-[0_0_30px_rgba(56,189,248,0.45)] hover:shadow-[0_0_50px_rgba(56,189,248,0.75)] hover:brightness-110 transition-all duration-300 text-center no-underline flex items-center justify-center gap-2.5 group"
+              >
+                <span className="w-2 h-2 rounded-full bg-slate-950 animate-ping" />
+                <span>EXPLORE FEATURED MISSION — DART</span>
+                <span className="text-slate-950 font-black group-hover:translate-x-1 transition-transform">→</span>
+              </a>
               <a
                 href="#missions"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 text-slate-950 font-mono text-xs font-bold uppercase tracking-[0.2em] shadow-[0_0_30px_rgba(56,189,248,0.35)] hover:shadow-[0_0_50px_rgba(56,189,248,0.65)] hover:brightness-110 transition-all duration-300 text-center no-underline"
+                className="w-full sm:w-auto px-7 py-4 rounded-xl border border-white/15 bg-white/[0.04] hover:bg-white/[0.08] hover:border-cyan-400/50 text-slate-200 font-mono text-xs uppercase tracking-[0.2em] transition-all duration-300 text-center backdrop-blur-md no-underline"
               >
-                Inspect The Artifacts
+                Inspect All Artifacts
               </a>
               <a
                 href="#archive"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/15 bg-white/[0.04] hover:bg-white/[0.08] hover:border-cyan-400/50 text-slate-200 font-mono text-xs uppercase tracking-[0.2em] transition-all duration-300 text-center backdrop-blur-md no-underline"
+                className="w-full sm:w-auto px-7 py-4 rounded-xl border border-white/15 bg-white/[0.04] hover:bg-white/[0.08] hover:border-cyan-400/50 text-slate-200 font-mono text-xs uppercase tracking-[0.2em] transition-all duration-300 text-center backdrop-blur-md no-underline"
               >
                 Mission Archives
               </a>
@@ -463,8 +472,8 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* Telemetry Footer */}
-                <div className="pt-5 border-t border-white/[0.08] mt-4">
+                {/* Telemetry Footer & 3D Mission Link */}
+                <div className="pt-5 border-t border-white/[0.08] mt-4 flex flex-col gap-3">
                   <div className="flex items-center justify-between text-xs font-mono text-slate-400">
                     <span>FINAL CALL: SOL 5111</span>
                     <span className="text-amber-400 flex items-center gap-1.5 font-semibold">
@@ -472,33 +481,52 @@ export default function Home() {
                       DORMANT
                     </span>
                   </div>
+                  <a
+                    href="/missions/opportunity"
+                    className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-600/20 hover:from-amber-500/35 hover:to-orange-600/35 border border-amber-500/35 hover:border-amber-400 text-amber-200 font-mono text-xs uppercase tracking-wider font-bold transition-all shadow-[0_0_15px_rgba(245,158,11,0.15)] hover:shadow-[0_0_25px_rgba(245,158,11,0.3)] no-underline"
+                  >
+                    <span>Launch 3D Mars Experience</span>
+                    <span className="text-amber-400">→</span>
+                  </a>
                 </div>
               </article>
 
-              {/* CARD 3: DART — Dimorphos */}
-              <article className="group relative rounded-2xl p-7 glass-panel glass-panel-hover flex flex-col justify-between overflow-hidden border border-white/[0.08] hover:border-cyan-400/40">
+              {/* CARD 3: DART — Dimorphos (FEATURED MISSION) */}
+              <article className="group relative rounded-2xl p-7 flex flex-col justify-between overflow-hidden border-2 border-cyan-400/60 shadow-[0_0_35px_rgba(56,189,248,0.22)] ring-1 ring-cyan-400/30 lg:scale-[1.02] z-10 bg-gradient-to-b from-[#071736]/95 via-[#040e24]/90 to-[#02050f]/95 glass-panel-hover">
                 {/* Visual Accent Glow (Kinetic Electric Cyan) */}
-                <div className="absolute -top-24 -right-24 w-52 h-52 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-cyan-500/30 transition-all duration-500" />
+                <div className="absolute -top-24 -right-24 w-60 h-60 bg-cyan-400/20 rounded-full blur-3xl pointer-events-none group-hover:bg-cyan-400/35 transition-all duration-500" />
+                <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-blue-600/15 rounded-full blur-2xl pointer-events-none" />
 
                 <div>
-                  {/* Planetary & Artifact Category */}
-                  <div className="flex items-center justify-between text-xs font-mono mb-5">
-                    <span className="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/25 text-cyan-300">
-                      {"DIMORPHOS // ASTEROID BELT"}
+                  {/* Distinctive FEATURED MISSION Badge */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-400/20 border border-cyan-400 text-cyan-300 text-[10px] font-mono font-bold tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(56,189,248,0.35)]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping" />
+                      ★ FEATURED MISSION
                     </span>
-                    <span className="text-slate-400">SEP 26, 2022</span>
+                    <span className="text-[10px] font-mono text-cyan-400 font-semibold tracking-wider">
+                      PLANETARY DEFENSE
+                    </span>
+                  </div>
+
+                  {/* Planetary & Artifact Category */}
+                  <div className="flex items-center justify-between text-xs font-mono mb-4">
+                    <span className="px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-cyan-200 font-bold">
+                      {"DIMORPHOS // (65803) DIDYMOS"}
+                    </span>
+                    <span className="text-slate-300 font-bold">SEP 26, 2022</span>
                   </div>
 
                   {/* Mission Title */}
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-1 group-hover:text-cyan-200 transition-colors">
+                  <h3 className="text-2xl sm:text-3xl font-black text-white mb-1 group-hover:text-cyan-200 transition-colors tracking-tight">
                     DART — Dimorphos
                   </h3>
-                  <div className="text-xs font-mono text-cyan-400 tracking-wider mb-5 uppercase">
-                    Double Asteroid Redirection Test
+                  <div className="text-xs font-mono text-cyan-300 font-bold tracking-wider mb-5 uppercase">
+                    Double Asteroid Redirection Test // Kinetic Impactor
                   </div>
 
                   {/* Custom Distinct Visual Illustration: DART Kinetic Collision Vector */}
-                  <div className="my-5 rounded-xl bg-black/60 border border-white/[0.08] overflow-hidden p-3 relative group-hover:border-cyan-500/30 transition-colors">
+                  <div className="my-5 rounded-xl bg-black/70 border border-cyan-500/30 overflow-hidden p-3 relative group-hover:border-cyan-400/60 transition-colors shadow-[inset_0_0_20px_rgba(56,189,248,0.1)]">
                     <svg
                       viewBox="0 0 360 170"
                       className="w-full h-auto"
@@ -587,24 +615,32 @@ export default function Home() {
                   </div>
 
                   {/* Mission Story */}
-                  <p className="text-slate-300 text-sm leading-relaxed mb-6 font-light">
-                    The only explorer whose terminal directive was intentional sacrifice.
-                    Racing through deep space 11 million kilometers from Earth, DART collided
-                    at hypersonic speed with the asteroid moonlet Dimorphos to prove humanity
-                    could deflect celestial hazards. Today, its kinetic remnants remain fused
-                    into the very bedrock of the crater it forged.
+                  <p className="text-slate-200 text-sm leading-relaxed mb-6 font-light">
+                    On September 26, 2022, 11 million kilometers from Earth, DART executed
+                    humanity&apos;s first full-scale planetary defense demonstration. Travelling at
+                    6.1 km/s (14,000 mph), it deliberately collided with Dimorphos—the 160-meter
+                    moonlet orbiting asteroid Didymos. The controlled kinetic impact altered
+                    Dimorphos&apos;s orbital period by 33 minutes, proving humanity can deflect
+                    celestial hazards without destroying them.
                   </p>
                 </div>
 
-                {/* Telemetry Footer */}
-                <div className="pt-5 border-t border-white/[0.08] mt-4">
-                  <div className="flex items-center justify-between text-xs font-mono text-slate-400">
-                    <span>IMPACT: HYPERVELOCITY</span>
-                    <span className="text-cyan-400 flex items-center gap-1.5 font-semibold">
+                {/* Telemetry Footer & Call to Action */}
+                <div className="pt-5 border-t border-cyan-500/20 mt-4 flex flex-col gap-3">
+                  <div className="flex items-center justify-between text-xs font-mono text-slate-300">
+                    <span>IMPACT: HYPERVELOCITY (6.1 KM/S)</span>
+                    <span className="text-cyan-300 flex items-center gap-1.5 font-bold">
                       <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#38bdf8]" />
-                      FUSED IN BEDROCK
+                      ORBIT DEFLECTED
                     </span>
                   </div>
+                  <a
+                    href="/missions/dart"
+                    className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-950 font-mono text-xs uppercase tracking-wider font-extrabold transition-all shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:shadow-[0_0_35px_rgba(56,189,248,0.65)] no-underline"
+                  >
+                    <span>Launch 3D Asteroid Encounter</span>
+                    <span className="text-slate-950 font-black">→</span>
+                  </a>
                 </div>
               </article>
             </div>

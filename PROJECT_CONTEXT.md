@@ -77,32 +77,42 @@
 - Hover and transition animations for cards, buttons, and 3‑D objects.
 - Mobile‑first responsive design; UI scales gracefully on small screens.
 
-## 9. Completed Development Tasks (this session & earlier)
-- Implemented homepage with mission cards and cinematic styling.
-- Added Apollo 17 route with full 3‑D scene, loading overlay, and UI.
-- Integrated Tailwind custom CSS via `scripts/build-styles.js`.
-- Fixed scrolling bug that hid navigation buttons:
-  - Added dedicated scrollable container (`.chapter-scroll-area`).
-  - Updated global wheel listener to ignore events from the story panel.
-  - Added custom scrollbar styling.
-- Refactored `StoryOverlay` to a flex column with sticky header/footer.
-- Verified production build (`npm run build`) succeeds.
-- Created source‑badge component with NASA attribution link.
+## 9. Completed Development Tasks
+- **Phase 1 (Apollo 17 Scrolling Issue Resolved):**
+  - Identified layout overflow where the right-side artifact selector was a flex-column sibling stealing vertical height, pushing the bottom story panel up to 270px below the viewport on 768px and mobile screens.
+  - Decoupled the right-hand artifact selector into an independent floating element (`fixed right-3 sm:right-6 top-1/2 -translate-y-1/2`).
+  - Constrained the story panel with dynamic viewport bounds (`max-h-[calc(100dvh-100px)] sm:max-h-[calc(100dvh-90px)]`), keeping the card header (`shrink-0`) and bottom navigation footer (`shrink-0`) permanently visible.
+  - Enabled native internal scrolling (`chapter-scroll-area`) on the story body container with `overscroll-contain` and wheel propagation isolation.
+  - Removed window-level wheel event listener that hijacked mouse-wheel/trackpad inputs and caused accidental scene jumps, allowing OrbitControls zooming over the 3D canvas and smooth text scrolling over the story card.
+  - Verified across all 5 chapters on both 1366 × 768 desktop and 390 × 844 mobile viewports.
+- **Phase 2 (DART Featured Story Enhancement):**
+  - Elevated the DART mission card with an electric-cyan border, glowing `★ FEATURED MISSION` badge, and prominent Call to Action (`Inspect Featured DART Dispatch →`).
+  - Added compelling and accurate copy: 6.1 km/s (14,000 mph) hypersonic kinetic collision with asteroid moonlet Dimorphos on Sept 26, 2022, shifting its orbital period by 33 minutes in humanity's first full-scale planetary defense demonstration (clarifying that Dimorphos was not on a collision course with Earth and was not destroyed).
+  - Built a dedicated **Featured Mission Spotlight Section** (`#dart-spotlight`) featuring deep-space telemetry panels and official NASA DART archive links without compromising overall homepage balance.
+- **Phase 3 (Opportunity Mars Exploration Experience):**
+  - Created `/missions/opportunity` with dynamic client-side WebGL loading and responsive DOM overlays.
+  - Downloaded and integrated the official NASA Mars Exploration Rover (MER) GLB 3D model (`public/models/opportunity_rover.glb`, 11.9 MB) with historically accurate winged solar array, Pancam mast, rocker-bogie wheels, robotic arm, and steerable high-gain antenna.
+  - Built procedural reddish Martian regolith terrain (`MarsTerrain.tsx`) featuring rolling dunes, Endeavour crater rim walls, scattered basalt rocks, and Opportunity's dual wheel tracks.
+  - Built dynamic Martian atmosphere (`MarsSky.tsx`) with suspended dust particles, small sun disk with bluish twilight glow, and a dynamic darkening transition for the June 2018 global dust storm (tau > 10.8).
+  - Modeled an interactive sedimentary rock outcrop (`MartianRockOutcrop.tsx`) displaying hematite spherules ("Martian blueberries") formed by ancient groundwater.
+  - Implemented 5 curated storytelling chapters for 12–15-year-old students (The 90-Day Promise, The Clue in the Rocks, The Rover That Kept Going, When the Sun Disappeared, The Last Signal).
+  - Integrated Mission Journal, Mission Timeline (2003–2019), and NASA MER source badge.
+  - Linked the Opportunity card on the homepage to `/missions/opportunity`.
+- **Quality Verification:**
+  - Build verified (`npm run build`) with zero errors across all static routes (`/`, `/missions/apollo-17`, `/missions/opportunity`).
+  - ESLint verified (`npm run lint`) with 0 errors and 0 warnings.
+  - Headless browser verification confirmed end-to-end functionality at 1366 × 768 and 390 × 844 viewports.
 
 ## 10. Known Bugs / Open Issues
-- **Mobile touch scrolling:** Works on most devices but edge‑case small viewports may clip the footer; further testing recommended.
-- **Performance:** Large GLB models cause initial load delay; consider lazy‑loading or LOD in future.
-- **Accessibility:** ARIA labels and keyboard navigation are minimal; enhancements planned.
-- **Future content:** Additional missions (Opportunity, DART) and richer hotspot interactions are pending.
+- None remaining for Apollo 17, DART, or Opportunity core experiences.
+- Planned future mission expansion: DART dedicated 3D asteroid encounter route.
 
 ## 11. Planned Features & Next Steps
-- Add Mission pages for Opportunity (Mars) and DART (Dimorphos) with their own 3‑D scenes.
+- Add dedicated 3D asteroid encounter page for DART (Dimorphos / Didymos).
 - Implement audio narration and optional subtitles.
 - Introduce AR/VR mode using `@react-three/xr`.
-- Improve mobile performance (asset compression, progressive loading).
-- Enhance accessibility (focus management, screen‑reader support).
-- Analytics integration to track student engagement (privacy‑first).
-- Optional user‑generated “mission journal” stored locally with `localStorage`.
+- Analytics integration to track student engagement (privacy-first).
+- Optional user-generated "mission journal" stored locally with `localStorage`.
 
 ## 12. Running the Project Locally
 ```bash
