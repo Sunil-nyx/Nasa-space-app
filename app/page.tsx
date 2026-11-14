@@ -127,10 +127,10 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-20 pt-12 border-t border-white/[0.08] w-full max-w-4xl">
               <div className="text-center p-3">
                 <div className="font-mono text-2xl sm:text-3xl font-bold text-white mb-1">
-                  300+
+                  150+
                 </div>
                 <div className="font-mono text-[11px] uppercase tracking-wider text-slate-400">
-                  Man-made Relics
+                  Moon Artifacts
                 </div>
               </div>
               <div className="text-center p-3">
@@ -143,18 +143,18 @@ export default function Home() {
               </div>
               <div className="text-center p-3">
                 <div className="font-mono text-2xl sm:text-3xl font-bold text-violet-300 mb-1">
-                  50+ Yrs
+                  55+ Yrs
                 </div>
                 <div className="font-mono text-[11px] uppercase tracking-wider text-slate-400">
-                  Longest Stasis
+                  Oldest Artifact
                 </div>
               </div>
               <div className="text-center p-3">
                 <div className="font-mono text-2xl sm:text-3xl font-bold text-sky-400 mb-1">
-                  0 dB
+                  No Wind
                 </div>
                 <div className="font-mono text-[11px] uppercase tracking-wider text-slate-400">
-                  Permanent Silence
+                  Near-Vacuum Preservation
                 </div>
               </div>
             </div>
@@ -655,7 +655,7 @@ export default function Home() {
                 The Science of Isolation
               </span>
               <h2 className="text-3xl sm:text-5xl font-extrabold text-white uppercase tracking-tight">
-                Why They Never Came Home
+                Why Some Machines Stayed Behind
               </h2>
               <p className="text-slate-400 text-base mt-4 font-light">
                 Bringing a spacecraft back across gravitational chasms requires astronomical

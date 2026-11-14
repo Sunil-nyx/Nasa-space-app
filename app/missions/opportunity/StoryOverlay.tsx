@@ -51,8 +51,8 @@ export const STORY_SCENES: StoryScene[] = [
     hudCoordinates: "MERIDIANI PLANUM // 1.9462° S, 354.4734° E",
     dateStr: "LANDING: JANUARY 25, 2004 — EAGLE CRATER",
     intro:
-      "On January 25, 2004, a parachute blossomed in the thin Martian sky and an airbag-cushioned cocoon slammed into the red desert, bouncing dozens of times before rolling to a stop. When the protective petals unfolded, Opportunity sat inside a small impact crater in the flat expanse of Meridiani Planum. Engineers at NASA gave the solar-powered robot an official warranty of just 90 Martian days.",
-    question: "What could a golf-cart-sized rover discover on an alien world in just ninety days?",
+      "On January 25, 2004, a parachute blossomed in the thin Martian sky and an airbag-cushioned cocoon slammed into the red desert, bouncing dozens of times before rolling to a stop. When the protective petals unfolded, Opportunity sat inside a small impact crater in the flat expanse of Meridiani Planum. Engineers at NASA gave the solar-powered robot an official warranty of just 90 Martian sols.",
+    question: "What could a golf-cart-sized rover discover on an alien world in just ninety sols?",
     choices: [
       {
         id: "inspect-opportunity",
@@ -61,7 +61,7 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "hotspot",
         targetId: "solar-panels",
         story:
-          "Opportunity was a 185-kilogram marvel of autonomous robotics. Perched on six aluminum wheels with rocker-bogie suspension, it was powered by black solar wings that generated roughly 900 watt-hours of electricity per Martian day—about enough power to run a standard lightbulb for nine hours. In the freezing Martian night, when temperatures plunged to -100°C, survival electric heaters kept its electronic brain alive inside an insulated box.",
+          "Opportunity was a 185-kilogram marvel of autonomous robotics. Perched on six aluminum wheels with rocker-bogie suspension, it was powered by black solar wings that generated roughly 900 watt-hours of electricity per Martian sol—about enough power to run a standard lightbulb for nine hours. In the freezing Martian night, when temperatures plunged to −100°C, survival electric heaters kept its electronic brain alive inside an insulated box.",
         fact:
           "VERIFIED FACT: A Martian solar day is called a 'sol'. One sol lasts 24 hours, 39 minutes, and 35 seconds—just slightly longer than an Earth day.",
       },
@@ -82,7 +82,7 @@ export const STORY_SCENES: StoryScene[] = [
         icon: "⏳",
         actionType: "story",
         story:
-          "Why did NASA predict Opportunity would last only 90 sols? Because Martian dust constantly settles out of the air. Engineers calculated that dust accumulating on the glass solar panels would reduce power generation below the level needed to keep the rover's heaters running. The mission was designed as a sprint against the ticking clock of dust.",
+          "Why did NASA predict Opportunity would last only 90 sols? Because Martian dust constantly settles out of the thin atmosphere. Engineers calculated that dust accumulating on the glass solar panels would reduce power generation below the level needed to keep the rover's heaters running. The mission was designed as a sprint against the ticking clock of dust.",
         fact:
           "VERIFIED FACT: Opportunity was twin to Spirit, which landed three weeks earlier on the other side of Mars in Gusev Crater.",
       },
@@ -97,7 +97,7 @@ export const STORY_SCENES: StoryScene[] = [
     dateStr: "FEBRUARY 2004 — FIRST SCIENTIFIC CAMPAIGN",
     intro:
       "Opportunity rolled forward to the crater wall and pointed its microscopic camera at the bedrock. When the first high-resolution pictures flashed onto screens at NASA's Jet Propulsion Laboratory, geologists gasped. Embedded throughout the reddish rock were thousands of strange, dark, perfectly round beads—resembling blueberries scattered in a muffin.",
-    question: "Could these tiny spheres be the definitive proof of ancient Martian water?",
+    question: "Could these tiny spheres be evidence of ancient Martian water?",
     choices: [
       {
         id: "investigate-blueberries",
@@ -117,9 +117,9 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "hotspot",
         targetId: "arm",
         story:
-          "Opportunity reached out with its 5-jointed Instrument Deployment Device (IDD). At the end of the arm was the Rock Abrasion Tool (RAT)—a diamond-tipped grinder that shaved away the weathered surface of the rock, allowing the Microscopic Imager to photograph pristine mineral grains and cross-bedded sand structures left behind by ancient gentle waves.",
+          "Opportunity reached out with its 5-jointed Instrument Deployment Device (IDD). At the end of the arm was the Rock Abrasion Tool (RAT)—a diamond-tipped grinder that shaved away the weathered surface of the rock, allowing the Microscopic Imager to photograph pristine mineral grains and cross-bedded sand structures left behind by ancient flowing water.",
         fact:
-          "VERIFIED FACT: The microscopic camera revealed cross-bedding ripples—sedimentary patterns identical to ripples created by flowing water in streams and lakes on Earth.",
+          "VERIFIED FACT: The microscopic camera revealed cross-bedding ripples—sedimentary patterns identical to ripples created by flowing water in streams on Earth.",
       },
       {
         id: "water-confirmation",
@@ -127,9 +127,9 @@ export const STORY_SCENES: StoryScene[] = [
         icon: "💧",
         actionType: "story",
         story:
-          "In March 2004, NASA held an emergency press conference: Opportunity had confirmed that liquid water once soaked the surface of Mars for extended geological eras. The ancient environment had been salty and acidic—a shallow sea or groundwater lake system—proving Mars was once far warmer and wetter than the frozen desert of today.",
+          "In March 2004, NASA announced a major finding: Opportunity had uncovered compelling evidence that liquid water once existed at Meridiani Planum. The ancient environment had been salty and acidic—a shallow groundwater system—with sulfate-rich evaporite rocks pointing to water that was briny rather than fresh. This was strong in-situ geological evidence that Mars once hosted liquid water, though the exact conditions and extent remain a subject of ongoing research.",
         fact:
-          "VERIFIED FACT: This was the first in-situ chemical and geological confirmation of ancient liquid water on the surface of another planet.",
+          "VERIFIED FACT: This was the first in-situ chemical and geological confirmation of ancient liquid water on the surface of another planet, based on hematite spherules, sulfate bedrock, and cross-bedding sedimentary structures.",
       },
     ],
   },
@@ -141,7 +141,7 @@ export const STORY_SCENES: StoryScene[] = [
     hudCoordinates: "TOTAL TRAVERSE: 45.16 KM // 5,000+ SOLS",
     dateStr: "2004 — 2018 // THE PLANETARY MARATHON",
     intro:
-      "Day 90 came and went. Opportunity showed zero sign of stopping. Day 500. Day 1,000. Day 4,000. Month after month, unexpected atmospheric gusts called 'cleaning events'—Martian dust devils sweeping across the plains—blew thick dust off the solar panels, magically restoring power to maximum. The machine engineered for a three-month sprint had become an interplanetary marathon runner.",
+      "Sol 90 came and went. Opportunity showed zero sign of stopping. Sol 500. Sol 1,000. Sol 4,000. Month after month, unexpected atmospheric gusts called 'cleaning events'—Martian dust devils sweeping across the plains—blew thick dust off the solar panels, restoring power to maximum. The machine engineered for a three-month sprint had become an interplanetary marathon runner.",
     question: "How far could a robot drive across an uncharted alien wilderness?",
     choices: [
       {
@@ -151,9 +151,9 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "camera",
         targetId: "rover-trail",
         story:
-          "From Eagle Crater, Opportunity drove south across miles of rippling sand dunes. It navigated deep into Endurance Crater (130 m wide), traversed the treacherous dunes of Victoria Crater (750 m wide), and finally arrived at the rim of Endeavour Crater—a gigantic impact basin 22 kilometers across. By March 2015, Opportunity had driven 42.195 kilometers—completing the first official off-Earth marathon.",
+          "From Eagle Crater, Opportunity drove south across miles of rippling sand dunes. It navigated deep into Endurance Crater (130 m wide), traversed the treacherous dunes of Victoria Crater (750 m wide), and finally arrived at the rim of Endeavour Crater—a gigantic impact basin 22 kilometers across. On March 24, 2015, Opportunity passed the 42.195 km mark—completing the first official off-Earth marathon. By the end of the mission it had driven 45.16 km total—a record that stood for over 8 years before NASA's Perseverance rover surpassed it in October 2026, reaching approximately 45.22 km.",
         fact:
-          "VERIFIED FACT: Opportunity holds the all-time world record for the longest distance driven by any wheeled vehicle on another world: 45.16 kilometers (28.06 miles).",
+          "HISTORICAL RECORD: Opportunity drove 45.16 km (28.06 miles)—the longest off-Earth journey in human exploration history at the time. That record was surpassed by NASA's Perseverance rover in October 2026. Opportunity's achievement remains a landmark in planetary exploration.",
       },
       {
         id: "inspect-wheels",
@@ -197,7 +197,7 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "camera",
         targetId: "pancam",
         story:
-          "Dust grains suspended in the thin atmosphere absorbed sunlight until the sky turned pitch black at high noon. Atmospheric opacity—measured as 'tau'—climbed beyond 10.8, the highest level ever recorded on Mars. For a rover that required direct sunlight to recharge its lithium-ion batteries, it was an existential emergency.",
+          "Dust grains suspended in the thin CO₂ atmosphere absorbed sunlight until the sky turned pitch black at high noon. Atmospheric opacity—measured as 'tau'—climbed beyond 10.8, the highest level ever recorded on Mars. For a rover that required direct sunlight to recharge its batteries, it was an existential emergency.",
         fact:
           "VERIFIED FACT: Opportunity's power dropped precipitously from over 640 watt-hours per sol to under 22 watt-hours—not even enough electricity to keep its master clock running.",
       },
@@ -208,7 +208,7 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "hotspot",
         targetId: "solar-panels",
         story:
-          "The greatest danger on Mars is not dust; it is cold. Without battery power to run internal survival heaters, the bitter -90°C Martian night threatens to freeze electronic soldering, crack quartz crystals inside timers, and permanently destroy the rover's computer boards. Opportunity shut down all instruments and entered automated deep-sleep stasis.",
+          "The greatest danger on Mars is not dust; it is cold. Without battery power to run internal survival heaters, the bitter −90°C Martian night threatens to freeze electronic soldering, crack quartz crystals inside timers, and permanently destroy the rover's computer boards. Opportunity shut down all instruments and entered automated deep-sleep stasis.",
         fact:
           "VERIFIED FACT: A solar-powered rover needs a minimum threshold of power just to wake up its computer and listen for incoming radio commands.",
       },
@@ -243,9 +243,9 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "camera",
         targetId: "pancam",
         story:
-          "On February 13, 2019, inside the Space Flight Operations Facility at NASA JPL, mission manager John Callas officially declared Opportunity's mission complete. Tearful engineers and scientists stood and applauded the rover that was built to explore for ninety days and instead survived for 5,498 days (nearly 15 Earth years).",
+          "On February 13, 2019, inside the Space Flight Operations Facility at NASA JPL, mission manager John Callas officially declared Opportunity's mission complete. The rover's last confirmed contact was Sol 5111 (June 10, 2018)—approximately 14 years and 136 days after landing on January 25, 2004. The final song played over mission control speakers was 'I'll Be Seeing You' by Billie Holiday, NASA's farewell transmission on February 12, 2019.",
         fact:
-          "VERIFIED FACT: Opportunity outlived its original design lifetime by a factor of 60, operating continuously across 5,352 Martian sols.",
+          "VERIFIED FACT: Opportunity was designed for a 90-sol mission. It operated for 5,111 sols—over 55 times its planned lifetime—before the 2018 dust storm ended its mission.",
       },
       {
         id: "permanent-sanctuary",
@@ -254,7 +254,7 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "hotspot",
         targetId: "solar-panels",
         story:
-          "Today, Opportunity rests peacefully on the gentle slope of Perseverance Valley, overlooking the vast expanse of Endeavour Crater. A fine veil of reddish dust coats its solar panels and camera lenses. In the dry, airless vacuum of space, metals do not rust and plastics do not rot. Opportunity will stand on that hillside for hundreds of thousands of years.",
+          "Today, Opportunity rests on the gentle slope of Perseverance Valley, overlooking the vast expanse of Endeavour Crater. A fine veil of reddish dust coats its solar panels and camera lenses. Mars has a thin CO₂ atmosphere—too thin to breathe but enough to carry dust and cause slow weathering over geological timescales. Opportunity will remain on that hillside for an extraordinarily long time, changing far more slowly than any artifact left on Earth.",
         fact:
           "VERIFIED FACT: NASA's Curiosity and Perseverance rovers later built upon Opportunity's discoveries, carrying nuclear power generators (RTGs) so global dust storms can never silence them.",
       },
@@ -264,9 +264,9 @@ export const STORY_SCENES: StoryScene[] = [
         icon: "📜",
         actionType: "story",
         story:
-          "Opportunity fundamentally transformed human understanding of Mars. It proved that Mars was once a warm, water-soaked, habitable world with liquid groundwater, freshwater lakes, and active hydrothermal systems. The little rover taught humanity that the Red Planet was once alive with geological potential.",
+          "Opportunity fundamentally advanced human understanding of Mars. At Meridiani Planum, it found strong evidence that ancient Mars once hosted liquid water—acidic and briny—that soaked the crust and left behind hematite spherules and sulfate-rich evaporite rocks. This was not the whole story of Mars: later missions like Curiosity and Perseverance explored different sites with evidence of more varied aqueous environments. But Opportunity's discoveries were the first definitive in-situ proof that liquid water once existed on another planet.",
         fact:
-          "VERIFIED FACT: Over 1,000 peer-reviewed scientific papers have been published directly using data gathered by Opportunity's instruments.",
+          "VERIFIED FACT: Hundreds of peer-reviewed scientific papers have been published directly using data gathered by Opportunity's instruments, reshaping the field of Mars geology.",
       },
     ],
   },
@@ -293,7 +293,7 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
       { label: "Filters", value: "16 spectral geology & solar filters" },
     ],
     quote:
-      "\"Through Pancam, we were not merely observing Mars—we were standing on it with our own eyes.\" — Dr. Jim Bell, Pancam Lead",
+      "Through Pancam, scientists on Earth could construct precise 3D terrain maps of Mars, guiding the rover around dangerous sand dunes — the closest thing to standing on another planet.",
     details:
       "Pancam's stereo separation mimics human binocular vision, allowing scientists on Earth to construct precise 3D terrain maps to guide the rover around dangerous sand dunes.",
   },
@@ -306,7 +306,7 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
     functionality:
       "Converted Martian sunlight into electrical energy to charge two 8-amp-hour lithium-ion batteries and run survival heaters.",
     missionSignificance:
-      "Originally warrantied for 90 days due to dust accumulation, periodic Martian dust devils swept the panels clean, extending the mission to over 14 years.",
+      "Originally warrantied for 90 sols due to dust accumulation, periodic Martian dust devils swept the panels clean, extending the mission to over 14 years. The 2018 global dust storm reduced solar input to nearly zero (tau >10), triggering the fault that ultimately ended the mission.",
     specs: [
       { label: "Array Area", value: "1.3 m² (14 sq ft)" },
       { label: "Peak Clean Output", value: "~900 Watt-hours per sol" },
@@ -314,7 +314,7 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
       { label: "Cell Technology", value: "Triple-Junction Gallium Arsenide" },
     ],
     quote:
-      "\"Every time we thought the dust would finish us, a Martian gust came along and gave Opportunity a fresh lease on life.\" — John Callas, Project Manager",
+      "Every time engineers thought dust accumulation would end the mission, a Martian dust devil swept the panels clean — unexpectedly extending the rover's productive life time and again.",
     details:
       "The solar panels were configured like folding wings during landing and deployed after touchdown. Dust devils unexpectedly cleaned the panels dozens of times during the mission.",
   },
@@ -327,17 +327,17 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
     functionality:
       "Maintained equal ground pressure across all six wheels without springs, allowing the rover to climb over 25-centimeter obstacles and traverse 30-degree slopes.",
     missionSignificance:
-      "Carried Opportunity across a record-shattering 45.16 kilometers (28.06 miles)—the longest off-Earth journey in human exploration history.",
+      "Carried Opportunity across 45.16 kilometers (28.06 miles) — the longest off-Earth journey in human exploration history at the time. That record was surpassed by NASA's Perseverance rover in October 2026.",
     specs: [
       { label: "Wheel Diameter", value: "25 cm (10 inches)" },
       { label: "Wheel Material", value: "Machined aircraft-grade aluminum" },
-      { label: "Total Distance", value: "45.16 km (Record holder)" },
+      { label: "Total Distance", value: "45.16 km (Former off-Earth record)" },
       { label: "Top Speed", value: "5 cm/sec (0.18 km/h)" },
     ],
     quote:
-      "\"45 kilometers on wheels made for a 600-meter warranty. Those aluminum cleats touched history.\" — NASA Rover Team",
+      "45 kilometers on wheels designed for a 600-meter warranty — Opportunity's aluminum cleats traced a path across Mars that no machine had ever matched, a record it held for over 8 years.",
     details:
-      "Each wheel was equipped with spiral cleats for biting into soft drift sand. In 2005, the rover was trapped for five weeks in 'Purgatory Dune' before engineers carefully extracted it.",
+      "Each wheel was equipped with spiral cleats for biting into soft drift sand. In April–June 2005, the rover was trapped for approximately 6 weeks (38 Martian sols) in a sandy ripple nicknamed 'Purgatory Dune' before engineers carefully extracted it.",
   },
 
   arm: {
@@ -356,7 +356,7 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
       { label: "Microscope Resolution", value: "30 microns per pixel" },
     ],
     quote:
-      "\"The arm was Opportunity's geologist hand—scraping, feeling, and magnifying ancient Martian history.\" — Steve Squyres, Principal Investigator",
+      "The robotic arm was Opportunity's geologist hand — scraping, sensing, and magnifying ancient Martian rock to reveal the chemical fingerprints of a wetter past.",
     details:
       "The Rock Abrasion Tool ground 5-centimeter-diameter holes up to 5 mm deep into rocks, removing billions of years of dust to reveal fresh interior crystals.",
   },
@@ -369,7 +369,7 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
     functionality:
       "Pointed directly at Earth to transmit telemetry and scientific data directly to NASA's Deep Space Network dishes in California, Spain, and Australia.",
     missionSignificance:
-      "Beamed over 217,000 photos and the final Sol 5111 engineering transmission across 100+ million kilometers of interplanetary vacuum.",
+      "Beamed over 217,000 photos and the final Sol 5111 engineering transmission across 100+ million kilometers of interplanetary space.",
     specs: [
       { label: "Dish Diameter", value: "28 cm (11 inches)" },
       { label: "Frequency Band", value: "X-band (Deep Space Network)" },
@@ -377,7 +377,7 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
       { label: "Final Signal Date", value: "June 10, 2018 (Sol 5111)" },
     ],
     quote:
-      "\"Hearing that X-band carrier signal from across the solar system was music to our ears for 14 years.\" — DSN Telemetry Team",
+      "For 14 years, the X-band carrier signal from across the solar system connected a small robot on Mars to a team of engineers on Earth — one of the longest-running deep-space conversations in history.",
     details:
       "In addition to the steerable high-gain dish, Opportunity carried an omnidirectional low-gain antenna and a UHF antenna for relaying data through Mars Odyssey and MRO satellites.",
   },
@@ -390,7 +390,7 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
     functionality:
       "Served as natural mineral barometers recording the presence of ancient, acidic, mineral-rich groundwater in Mars's early history.",
     missionSignificance:
-      "Provided humanity's first undisputed chemical and physical evidence that liquid water once flowed across and beneath the surface of Mars.",
+      "Provided humanity's first undisputed chemical and physical evidence that ancient acidic liquid water once existed on Mars at Meridiani Planum.",
     specs: [
       { label: "Average Size", value: "1 to 5 mm in diameter" },
       { label: "Composition", value: "Crystalline Grey Hematite" },
@@ -398,7 +398,7 @@ export const HOTSPOT_DATA: Record<string, HotspotDetail> = {
       { label: "Discovery Site", value: "Eagle Crater, Meridiani Planum" },
     ],
     quote:
-      "\"These little blueberries are the calling card of liquid water on Mars.\" — Steve Squyres",
+      "These tiny iron spheres are the calling card of liquid water on Mars — formed in ancient, acidic, mineral-rich groundwater that once soaked the bedrock of Meridiani Planum.",
     details:
       "On Earth, identical hematite concretions form when groundwater rich in dissolved iron flows through porous sandstone. As the rock erodes away, the hard iron beads accumulate on the ground like loose marbles.",
   },
@@ -503,6 +503,119 @@ function DiscoveryLog({ discovered, onClose, onJumpToHotspot }: DiscoveryLogProp
 }
 
 // ─────────────────────────────────────────────
+// SOURCES & FACT-CHECK MODAL
+// ─────────────────────────────────────────────
+
+interface SourcesModalProps {
+  onClose: () => void;
+}
+
+function SourcesModal({ onClose }: SourcesModalProps) {
+  return (
+    <div className="pointer-events-auto fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+      <div className="max-w-xl w-full max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 backdrop-blur-2xl bg-[#140806] border border-amber-500/30 shadow-[0_0_80px_rgba(245,158,11,0.2)] relative">
+        <button
+          onClick={onClose}
+          className="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white flex items-center justify-center font-mono cursor-pointer transition-colors"
+        >
+          ✕
+        </button>
+
+        <div className="flex items-center gap-2 mb-2 font-mono text-[11px] tracking-[0.25em] text-amber-400 uppercase">
+          <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+          SOURCES &amp; FACT CHECKS
+        </div>
+        <h3 className="text-2xl sm:text-3xl font-black text-white mb-1">References</h3>
+        <p className="text-xs text-slate-400 font-mono mb-5">
+          Fact-checked: 14 November 2026 — All content cross-referenced against NASA primary sources.
+        </p>
+
+        <div className="space-y-4 mb-6">
+          {/* Primary source */}
+          <div className="p-4 rounded-xl bg-amber-950/20 border border-amber-400/25">
+            <div className="text-[10px] font-mono uppercase tracking-wider text-amber-300 font-bold mb-1">
+              PRIMARY SOURCE
+            </div>
+            <div className="text-xs font-semibold text-white mb-1">
+              NASA Opportunity Mission Archive
+            </div>
+            <a
+              href="https://www.nasa.gov/mission/mars-exploration-rover-opportunity/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-mono text-amber-400 hover:text-amber-300 underline break-all"
+            >
+              https://www.nasa.gov/mission/mars-exploration-rover-opportunity/
+            </a>
+            <p className="text-[10px] text-slate-400 mt-1 font-sans">
+              Mission history, telemetry records, instrument specifications, and science findings for the Mars Exploration Rover Opportunity (MER-B).
+            </p>
+          </div>
+
+          {/* Driving record update */}
+          <div className="p-4 rounded-xl bg-amber-950/20 border border-amber-400/25">
+            <div className="text-[10px] font-mono uppercase tracking-wider text-amber-300 font-bold mb-1">
+              DRIVING RECORD UPDATE — OCTOBER 2026
+            </div>
+            <div className="text-xs font-semibold text-white mb-1">
+              NASA Perseverance Surpasses Off-Earth Driving Record
+            </div>
+            <a
+              href="https://www.nasa.gov/mars-exploration/perseverance/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-mono text-amber-400 hover:text-amber-300 underline break-all"
+            >
+              https://www.nasa.gov/mars-exploration/perseverance/
+            </a>
+            <p className="text-[10px] text-slate-400 mt-1 font-sans">
+              On approximately 11 October 2026, NASA&apos;s Perseverance rover reached ~45.22 km (28.10 miles), surpassing Opportunity&apos;s record of 45.16 km (28.06 miles) that had stood for over 8 years. Opportunity remains the former record holder.
+            </p>
+          </div>
+
+          {/* Key facts verified */}
+          <div className="p-4 rounded-xl bg-amber-950/20 border border-amber-400/25">
+            <div className="text-[10px] font-mono uppercase tracking-wider text-amber-300 font-bold mb-2">
+              KEY FACTS VERIFIED
+            </div>
+            <ul className="space-y-1.5 text-[10px] font-sans text-slate-300">
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Landing: January 25, 2004 — Eagle Crater, Meridiani Planum</li>
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Planned mission: 90 Martian sols (~92 Earth days)</li>
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Final contact: June 10, 2018 (Sol 5111) — global dust storm</li>
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Mission declared complete: February 13, 2019 (after 1,000+ unanswered contact attempts)</li>
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Total operating time: approximately 14 years, 136 days (Sol 5111 operated)</li>
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Total distance driven: 45.16 km (28.06 miles)</li>
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Marathon milestone (42.195 km): March 24, 2015</li>
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Purgatory Dune entrapment: April–June 2005, ~38 Martian sols (~6 weeks)</li>
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Peak solar output: ~900 watt-hours per sol</li>
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Water evidence: acidic, briny ancient groundwater at Meridiani Planum (not freshwater)</li>
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Mars atmosphere: thin CO₂, ~0.6% of Earth&apos;s pressure — not airless</li>
+              <li className="flex gap-2"><span className="text-amber-400 shrink-0">✓</span> Final farewell song: &quot;I&apos;ll Be Seeing You&quot; by Billie Holiday, played February 12, 2019</li>
+            </ul>
+          </div>
+
+          {/* Disclaimer */}
+          <div className="p-3 rounded-xl bg-black/40 border border-white/5">
+            <p className="text-[10px] font-mono text-slate-400 leading-relaxed">
+              <span className="text-amber-300 font-semibold">Educational Project — </span>
+              Silent Explorers is an independent educational project. Content is not affiliated with or endorsed by NASA.
+              Quotations in this experience are paraphrased educational narration, not verbatim statements, unless explicitly cited.
+            </p>
+          </div>
+        </div>
+
+        <button
+          onClick={onClose}
+          className="w-full py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white font-mono text-xs uppercase tracking-widest transition-colors cursor-pointer"
+        >
+          Return to Mars Exploration
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────
 // MAIN STORY OVERLAY FOR OPPORTUNITY
 // ─────────────────────────────────────────────
 
@@ -527,6 +640,7 @@ export function StoryOverlay({
 }: StoryOverlayProps) {
   const [showTimeline, setShowTimeline] = useState(false);
   const [showJournal, setShowJournal] = useState(false);
+  const [showSources, setShowSources] = useState(false);
   const [selectedChoiceId, setSelectedChoiceId] = useState<string | null>(null);
   const [discovered, setDiscovered] = useState<Set<string>>(new Set(["solar-panels"]));
 
@@ -657,6 +771,14 @@ export function StoryOverlay({
               </div>
             </div>
           </div>
+
+          {/* Sources & Fact Checks Button */}
+          <button
+            onClick={() => setShowSources(true)}
+            className="hidden sm:block px-3.5 py-2 rounded-xl backdrop-blur-xl bg-[#140806]/85 border border-amber-400/30 hover:border-amber-400/60 hover:bg-[#200d09] text-xs font-mono tracking-wider text-amber-300 transition-all cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+          >
+            Sources
+          </button>
         </div>
       </header>
 
@@ -950,7 +1072,15 @@ export function StoryOverlay({
                 <div className="text-xs text-amber-400 font-bold">FEBRUARY–MARCH 2004</div>
                 <div className="text-sm text-white font-semibold mb-1">Discovery of Hematite Blueberries</div>
                 <div className="text-xs text-slate-400 font-sans font-light">
-                  Confirmation of ancient acidic liquid groundwater, completing primary science objectives in under 60 days.
+                  Confirmation of ancient acidic liquid groundwater evidence, completing primary science objectives in under 60 sols.
+                </div>
+              </div>
+
+              <div>
+                <div className="text-xs text-amber-400 font-bold">APRIL–JUNE 2005</div>
+                <div className="text-sm text-white font-semibold mb-1">Purgatory Dune Entrapment</div>
+                <div className="text-xs text-slate-400 font-sans font-light">
+                  Opportunity became stuck in a sandy ripple (&ldquo;Purgatory Ripple&rdquo;) for approximately 38 Martian sols (~6 weeks) before engineers extracted it.
                 </div>
               </div>
 
@@ -974,7 +1104,7 @@ export function StoryOverlay({
                 <div className="text-xs text-amber-400 font-bold">MARCH 24, 2015</div>
                 <div className="text-sm text-white font-semibold mb-1">First Off-Earth Marathon (42.195 km)</div>
                 <div className="text-xs text-slate-400 font-sans font-light">
-                  Became the first human vehicle to drive a marathon distance beyond Earth, passing 42.195 km in 11 years.
+                  Became the first vehicle to drive a marathon distance beyond Earth, passing 42.195 km after 11 years on Mars.
                 </div>
               </div>
 
@@ -982,7 +1112,7 @@ export function StoryOverlay({
                 <div className="text-xs text-amber-400 font-bold">JUNE 10, 2018 (SOL 5111)</div>
                 <div className="text-sm text-white font-semibold mb-1">Final Telemetry Transmission</div>
                 <div className="text-xs text-slate-400 font-sans font-light">
-                  A planet-encircling global dust storm reduced atmospheric sunlight to 0.002%, silencing the rover in Perseverance Valley.
+                  A planet-encircling global dust storm reduced solar input to nearly zero (tau &gt;10), silencing the rover in Perseverance Valley.
                 </div>
               </div>
 
@@ -990,7 +1120,15 @@ export function StoryOverlay({
                 <div className="text-xs text-amber-400 font-bold">FEBRUARY 13, 2019</div>
                 <div className="text-sm text-white font-semibold mb-1">Mission Declared Complete</div>
                 <div className="text-xs text-slate-400 font-sans font-light">
-                  After sending over 1,000 recovery signals, NASA concluded the mission, celebrating 14+ years of groundbreaking exploration.
+                  After sending over 1,000 recovery signals, NASA concluded the mission, celebrating approximately 14 years and 136 days of groundbreaking exploration.
+                </div>
+              </div>
+
+              <div>
+                <div className="text-xs text-amber-400 font-bold">OCTOBER 2026</div>
+                <div className="text-sm text-white font-semibold mb-1">Perseverance Surpasses Opportunity&apos;s Driving Record</div>
+                <div className="text-xs text-slate-400 font-sans font-light">
+                  NASA&apos;s Perseverance rover reached approximately 45.22 km (28.10 miles), surpassing Opportunity&apos;s record of 45.16 km that had stood for over 8 years. Opportunity remains the former record holder and a landmark in planetary exploration.
                 </div>
               </div>
             </div>
@@ -1015,6 +1153,9 @@ export function StoryOverlay({
           }}
         />
       )}
+
+      {/* ── SOURCES & FACT CHECKS MODAL ──────────────────────── */}
+      {showSources && <SourcesModal onClose={() => setShowSources(false)} />}
     </div>
   );
 }

@@ -4,6 +4,29 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 // ─────────────────────────────────────────────
+// SOURCES DATA
+// ─────────────────────────────────────────────
+
+const SOURCES = [
+  {
+    label: "NASA Apollo 17 Mission Details",
+    url: "https://www.nasa.gov/mission/apollo-17/",
+  },
+  {
+    label: "NASA Apollo 17 Press Kit (PDF)",
+    url: "https://www.nasa.gov/wp-content/uploads/2015/01/55468main_apollo17_presskit.pdf",
+  },
+  {
+    label: "NASA Lunar Heritage Site Recommendations",
+    url: "https://www.nasa.gov/sites/default/files/atoms/files/nasa_robotic_lunar_landers_workshop_one_small_step.pdf",
+  },
+  {
+    label: "Apollo 17 ALSEP & Science Experiments (NASA SP-330)",
+    url: "https://history.nasa.gov/SP-330/sp330.htm",
+  },
+];
+
+// ─────────────────────────────────────────────
 // TYPES
 // ─────────────────────────────────────────────
 
@@ -51,7 +74,7 @@ export const STORY_SCENES: StoryScene[] = [
     hudCoordinates: "LUNAR DESCENT // ALTITUDE: 15 KM",
     dateStr: "DECEMBER 11, 1972 — TAURUS-LITTROW VALLEY",
     intro:
-      "You are dropping through the vacuum of space toward a deep, narrow canyon flanked by mountains taller than the Swiss Alps. Below, a desert of powdered glass and smashed basalt has rested in absolute stillness for over three billion years. There is no air. No weather. No sound. Even a whispered breath cannot exist beyond a space helmet.",
+      "You are dropping through the vacuum of space toward a deep, narrow canyon flanked by mountains rising more than 2,000 metres above the valley floor — comparable in scale to some of the great Alpine peaks. Below, a desert of powdered glass and smashed basalt has rested in absolute stillness for over three billion years. There is no air. No weather. No sound. Even a whispered breath cannot exist beyond a space helmet.",
     question: "What would you expect to find where humans once walked?",
     choices: [
       {
@@ -118,7 +141,7 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "hotspot",
         targetId: "legs",
         story:
-          "Beneath the golden chassis, four spider-like legs branch outward into broad round footpads. Each strut was packed with crushable honeycomb aluminium designed to absorb the kinetic shock of slamming into the lunar surface at several metres per second. Protruding beneath three of the footpads were 1.7-metre blue spring probes that touched the surface first to signal engine shutdown.",
+          "Beneath the golden chassis, four spider-like legs branch outward into broad round footpads. Each strut was packed with crushable honeycomb aluminium designed to absorb the kinetic shock of slamming into the lunar surface at several metres per second. Protruding beneath three of the footpads were 1.73-metre metal contact probes that touched the surface first to signal engine shutdown.",
         fact:
           "VERIFIED FACT: The contact sensing probes triggered a blue indicator light on the cockpit instrument panel reading 'LUNAR CONTACT', prompting Cernan to cut the descent engine a split-second before touchdown.",
       },
@@ -129,7 +152,7 @@ export const STORY_SCENES: StoryScene[] = [
         actionType: "hotspot",
         targetId: "engine",
         story:
-          "Tucked right up into the centre of the descent frame is the rocket nozzle of the TRW Descent Propulsion Engine. Unlike early ballistic missiles whose engines fired only at maximum thrust, this engine was throttleable between 10% and 60% power. This gave the commander the flight control of a helicopter to hover, brake, and search for a flat landing pad amidst treacherous crater fields.",
+          "Tucked right up into the centre of the descent frame is the rocket nozzle of the TRW Descent Propulsion Engine. Unlike early ballistic missiles whose engines fired only at maximum thrust, this engine was fitted with a variable-throttle design. This gave the commander the flight control of a helicopter to hover, brake, and search for a flat landing pad amidst treacherous crater fields.",
         fact:
           "VERIFIED FACT: Throttling a hypergolic rocket in real time was one of the greatest aerospace breakthroughs of the Apollo era. It operated smoothly using nitrogen tetroxide and Aerozine 50 fuel.",
       },
@@ -151,10 +174,10 @@ export const STORY_SCENES: StoryScene[] = [
     id: 3,
     chapter: "CHAPTER 03 // THE TRACKS THAT NEVER FADE",
     title: "The Tracks That Never Fade",
-    hudCoordinates: "TRAVERSE DISTANCE: 35.7 KM // 110 KG SAMPLES",
+    hudCoordinates: "TRAVERSE DISTANCE: ~35.9 KM // 110 KG SAMPLES",
     dateStr: "EXPEDITIONS: DEC 11–13, 1972",
     intro:
-      "Branching away from Challenger are dual parallel ribbons of crushed regolith. They trace a 35-kilometre voyage across boulders, hills, and crater rims. Those tracks were carved by the ultimate planetary scout vehicle: the Lunar Roving Vehicle (LRV).",
+      "Branching away from Challenger are dual parallel ribbons of crushed regolith. They trace an approximately 35.9-kilometre voyage across boulders, hills, and crater rims. Those tracks were carved by the ultimate planetary scout vehicle: the Lunar Roving Vehicle (LRV).",
     question: "Where do the tracks lead across the valley?",
     choices: [
       {
@@ -166,7 +189,7 @@ export const STORY_SCENES: StoryScene[] = [
         story:
           "The camera glides along the tire tracks winding across the desolate valley floor toward Shorty Crater. Over three days, Cernan and Schmitt drove this electric buggy across boulder fields and steep slopes at up to 18 km/h. At Shorty Crater, Schmitt made one of the most stunning discoveries in planetary history: a brilliant streak of vivid orange soil amidst the monochrome grey.",
         fact:
-          "VERIFIED FACT: The 'orange soil' wasn't rust or moss—it was microscopic beads of volcanic pyroclastic glass, erupted in ancient fire-fountains 3.6 billion years ago and preserved in the pristine lunar vacuum.",
+          "VERIFIED FACT: The 'orange soil' wasn't rust or moss—it was microscopic beads of volcanic pyroclastic glass, erupted in ancient fire-fountains approximately 3.64 billion years ago and preserved in the pristine lunar vacuum.",
       },
       {
         id: "examine-rover-wheels",
@@ -223,7 +246,7 @@ export const STORY_SCENES: StoryScene[] = [
         story:
           "Before ascending the ladder for the final time, Eugene Cernan stood beside the front landing strut and traced his nine-year-old daughter Tracy's initials—TDC—into the dust with his glove. Then, speaking into his helmet microphone to the people of Earth, he promised: 'We leave as we came, and, God willing, as we shall return, with peace and hope for all mankind.'",
         fact:
-          "VERIFIED FACT: Those initials TDC still exist untouched at Taurus-Littrow. No wind, rain, or biological decay exists to disturb them.",
+          "VERIFIED FACT: Those initials TDC were traced for his daughter Teresa Dawn Cernan (known as Tracy). With no wind, rain, or biological decay to disturb them, they very likely remain in the regolith to this day — though no mission has returned to verify them.",
       },
       {
         id: "stage-fate",
